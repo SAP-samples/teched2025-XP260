@@ -1,7 +1,7 @@
 <img width="253" height="28" alt="image" src="https://github.com/user-attachments/assets/7a2c10b4-d78d-43be-aa3c-f8b15356c5cd" /># Getting started
 In the excercises you will use a BTP subaccount wit a subaccount admin user, which is the same as platform and application user. 
 xp260-0XX@education.cloud.sap ( with X depending on your seat from 01 - 40 )
-PWD is always :  Acce$$teched25
+PWD is always  Acce$$teched25
 Identity Provider they reside in is the Identity Authentication tenant akihlqzx8.accounts.ondemand.com
 
 Additionally you will make use of some test users to test the application you are working on.
