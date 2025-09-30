@@ -26,5 +26,5 @@ Additionally you will make use of some test users to test the application you ar
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Broken Access Control](../ex1/README.md)
+Now that you have made yourself familiar with the setup,
+continue to - [Exercise 1 - Broken Access Control](../ex1/README.md)
