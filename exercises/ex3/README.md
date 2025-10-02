@@ -342,10 +342,8 @@ The remediation successfully addresses the SQL Injection vulnerability by:
 
 ### 🔑 Key Take‑aways (SAP CAP Recommendations)
 Whenever there’s user input involved:
-  1. Never use string concatenation when constructing queries!
-     String concatenation re‑introduces injection risk because user data becomes part of the raw SQL text.
-  2. Never surround tagged template strings with parentheses!
-      Parentheses force the template literal to be evaluated as a plain string before the tag processes it, bypassing parameter‑binding and opening the door to injection.
+  1. **Never use string concatenation when constructing queries! :** String concatenation re‑introduces injection risk because user data becomes part of the raw SQL text.
+  2. **Never surround tagged template strings with parentheses! :** Parentheses force the template literal to be evaluated as a plain string before the tag processes it, bypassing parameter‑binding and opening the door to injection.
 
 In this exercise, you have learned how to:
 - **Identify SQL Injection Vulnerabilities:** Recognize unsafe patterns like direct string interpolation in queries.
