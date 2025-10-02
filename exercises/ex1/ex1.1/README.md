@@ -337,7 +337,7 @@ UI.FieldGroup #GeneratedGroup : {
 ```
 Copy the contents of [annotations.cds](./annotations.cds) into your project’s app/incidents/annotations.cds file.
 
-**File**: app/incidents/webapp/i18n.properties
+**File**: app/incidents/webapp/i18n/i18n.properties
 
 ```
 ...
@@ -346,7 +346,7 @@ Copy the contents of [annotations.cds](./annotations.cds) into your project’s 
 AssignedTo=Assigned To
 
 ```
-Copy the contents of [i18n.properties](./i18n.properties) into your project’s app/incidents/webapp/i18n.properties file.
+Copy the contents of [i18n.properties](./i18n.properties) into your project’s app/incidents/webapp/i18n/i18n.properties file.
 
 ## ✅ 5. Verification:
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
