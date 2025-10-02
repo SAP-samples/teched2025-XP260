@@ -7,7 +7,7 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 In this exercise you will extend the local audit-logging setup from [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) into a production-grade SAP BTP environment. :
 
-###🎯 Key Learning Objectives
+### 🎯 Key Learning Objectives
 
   * Bind the managed SAP Audit Log Service to your Incident Management application.
   * Deploy the incident management application  on the SAP BTP Cloud Foundry runtime and configure the managed Audit Log Service.
