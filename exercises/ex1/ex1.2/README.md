@@ -106,8 +106,7 @@ class ProcessorService extends cds.ApplicationService {
 
 - Action:
   - Log out and log in as david.admin@company.com (admin role).
-  - Navigate to the closed incident modified by Alice.
-  - Attempt to edit the closed incident (e.g., add a comment).
+  - Try to navigate to the closed incident modified by Alice.
 - Result:
   - ❌ UI displays a blank loading screen (no error message).
   - ❌ Root Cause: @requires: 'support' in services.cds blocks admin access to the service.
