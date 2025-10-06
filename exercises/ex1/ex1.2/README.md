@@ -289,7 +289,7 @@ The remediation successfully addresses Vertical Privilege Escalation by:
 
 In these exercises, you have learned how to:
   - Mitigate Vertical Privilege Escalation by explicitly defining admin-only operations in @restrict rules.
-  - Leverage CAP’s Role-Based Access Control (RBAC) to separate support and admin capabilities.
+  - Leverage CAP’s Role-Based Access Control (RBAC) to separate support and admin tasks.
   - Combine Declarative and Imperative Security for comprehensive protection:
     * CDS Annotations (@restrict) for coarse-grained access control.
     * JavaScript Handlers (e.g., onModify) for fine-grained business logic enforcement.
