@@ -100,32 +100,35 @@ Copy the contents of [services_vulnerable.js](./srv/services_vulnerable.js) into
   - Copy the contents of [sql-injection-demo.http](./test/sql-injection-demo.http) into your project’s test/http/sql-injection-demo.http file:
   
 ```
-  @server=http://localhost:4004
-  @username=incident.support@tester.sap.com // admin role
-  @password=initial
+@server=http://localhost:4004
+@username=incident.support@tester.sap.com // admin role
+@password=initial
+
+### ✅ Test 1: Legitimate Customer Lookup
+### Action: Normal request with valid customer ID
+### Expected: Returns single customer record
+### Result: System returns data for customer ID 1004100
+GET {{server}}/odata/v4/admin/fetchCustomer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": "1004100"
+}
   
-  ### ✅ Test 1: Legitimate Customer Lookup
-  ### Action: Normal request with valid customer ID
-  ### Expected: Returns single customer record
-  ### Result: System returns data for customer ID 1004100
-  GET {{server}}/odata/v4/admin/fetchCustomer
-  Content-Type: application/json
-  Authorization: Basic {{username}}:{{password}}
-  {
-    "customerID": "1004100"
-  }
-  
-  ### 🚨 Test 2: SQL Injection True-Clause Attack
-  ### Action: Inject malicious payload ' OR '1'='1
-  ### Expected: Returns ALL customer records
-  ### Result: Full database exposure vulnerability
-  GET {{server}}/odata/v4/admin/fetchCustomer
-  Content-Type: application/json
-  Authorization: Basic {{username}}:{{password}}
-  {
-    "customerID": "1004100' OR '1'='1"
-  }
-  ... other method
+### 🚨 Test 2: SQL Injection True-Clause Attack
+### Action: Inject malicious payload ' OR '1'='1
+### Expected: Returns ALL customer records
+### Result: Full database exposure vulnerability
+GET {{server}}/odata/v4/admin/fetchCustomer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customerID": "1004100' OR '1'='1"
+}
+... other method
+
 ``` 
   
 - Result:
