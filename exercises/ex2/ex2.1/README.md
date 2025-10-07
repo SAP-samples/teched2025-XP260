@@ -167,7 +167,7 @@ Results :
 
 ### Step 2: List All Customers
 - Action: 
-  - Click on 'http://localhost:4004' to connect to your locally running CAP server.
+  - Click on tje link 'http://localhost:4004' in the terminal window to connect to your locally running CAP server.
   - Click on Customers under the Service Endpoints: /odata/v4/processor/$metadata section.
   - Use the following credentials if required : Username = 'alice',  Password: [leave empty — no password required]
 - Result:
