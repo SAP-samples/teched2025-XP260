@@ -453,11 +453,11 @@ These files were previously generated using the following command:
   time: 2025-09-19T21:57:09.944Z
 }
 ```
-- ✅ Audit logs generate **PersonalDataModified** entries for changes to annotated fields with @PersonalData.
-- ✅ Audit logs masks only fields explicitly annotated #Sensitive.
+- ✅ Audit log generates **PersonalDataModified** entries for changes to annotated fields with @PersonalData.
+- ✅ Audit log masks only fields explicitly annotated #Sensitive.
 - ✅ This behavior is regulated by the @cap-js/audit-logging plugin and the audit-log.json configuration.
 
-#### Step 5: Test Write Access to Customer Data with with Support User
+#### Step 5: Test Write Access to Customer Data with Support User
 - Action:
   - Open test/http/AdminService.http file.
   - Ensure that the username is 'alice' and the password is left empty
