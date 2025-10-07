@@ -76,7 +76,7 @@ try {
           `Blocked potential SQLi attempt: ${error.message.split('')[0]}`
         );
         
-        // Return clean error without stack trace
+        // Return clean error without stack trace in production
         return req.reject(400, 'Invalid customer identifier');
       }
     });
