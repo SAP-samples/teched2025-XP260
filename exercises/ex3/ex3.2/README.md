@@ -1,7 +1,7 @@
-# Exercise 2.2 – Security Event Monitoring in SAP BTP Production Environment
+# Exercise 3.2 – Security Event Monitoring in SAP BTP Production Environment
 
 Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
-)
+
 
 ## 1. Overview
 

@@ -1,4 +1,4 @@
-# Exercise 2.1 - Audit Logging for Sensitive Data Access
+# Exercise 3.1 - Audit Logging for Sensitive Data Access
 Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
 
 ## 📖  1. Overview :
@@ -504,6 +504,4 @@ In these exercise, you have learned how:
 * To generate comprehensive security event logs for unauthorized access attempts, enabling regulatory compliance with PCI-DSS and GDPR requirements.
 
 
-👉 Next up: [Exercise 2.2 - Security Event Monitoring in SAP BTP Production Environment](../ex2.2/README.md), where we take these audit logs beyond local testing and validate them in a production-grade enterprise environment.
-    
-
+👉 Next up: [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment](../ex2.2/README.md), where we take these audit logs beyond local testing and validate them in a production-grade enterprise environment.
