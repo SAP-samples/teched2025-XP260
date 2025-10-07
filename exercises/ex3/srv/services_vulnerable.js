@@ -65,9 +65,20 @@ class AdminService extends cds.ApplicationService {
       const { customerID } = req.data;
       
     // VULNERABLE CODE: Direct string interpolation in query
-     const query = `SELECT * FROM sap_capire_incidents_Customers WHERE ID = '${customerID}'`;
-      const results = await cds.run(query);
+      const query = `SELECT * FROM sap_capire_incidents_Customers WHERE ID = '${customerID}'`;
+try {
+      const results = await cds.run(query);        
       return results;
+
+      } catch (error) {
+        // Log full error internally but don't expose details
+        cds.log('security').error(
+          `Blocked potential SQLi attempt: ${error.message.split('')[0]}`
+        );
+        
+        // Return clean error without stack trace
+        return req.reject(400, 'Invalid customer identifier');
+      }
     });
 
     return super.init();
