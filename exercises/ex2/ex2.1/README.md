@@ -206,6 +206,7 @@ To address the identified IDOR vulnerabilities and data privacy risks, this sect
 
 - Action :
   - Add the @cap-js/audit-logging plugin to your project
+  - Open a new terminal window (as cds watch is running in the current one) and execute the following command
   ```
   npm add @cap-js/audit-logging
   ```
