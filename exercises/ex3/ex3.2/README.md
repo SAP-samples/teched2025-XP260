@@ -69,7 +69,6 @@ Result: An MTAR archive is created under mta_archives/ (e.g., incident-managemen
 ```
   cf deploy mta_archives/<mtar_name>.mtar 
 ```
-Result: The CF CLI shows green checks for every module and resource, including automatic provisioning and binding of incidents-auditlog.
 
 
 
