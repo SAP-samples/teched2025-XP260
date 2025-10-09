@@ -52,3 +52,4 @@ class ProcessorService extends cds.ApplicationService {
 }
 
 module.exports = { ProcessorService }
+
