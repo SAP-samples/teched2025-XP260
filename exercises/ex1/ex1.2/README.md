@@ -205,7 +205,7 @@ Here is the updated services.js with added checks to enforce the admin-only rule
 module.exports = { ProcessorService }
 
 ```
-Copy the contents of [services.js](./services.js) into your project’s srv/services.js file.
+Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
 
 Key Changes:
 
