@@ -203,12 +203,15 @@ To address the identified vulnerabilities and data privacy risks, this section i
 
 ### Step 1: Add Audit Logging Dependency
 
-- Action :Add the @cap-js/audit-logging plugin to your project
-  
-Result:
-  - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s package.json file.
-  - ✅ **Enables Automatic Audit Logging** – All access and modifications to personal data are logged in real-time.
-  - ✅ **Tracks CRUD Operations** – Every Create, Read, Update, and Delete operation is captured for full traceability.
+- Action : Add the @cap-js/audit-logging plugin to your project
+
+```
+npm install @cap-js/audit-logging
+```  
+- Result:
+  - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s [package.json](./pacjkage.json) file.
+  - ✅ **Enables Automatic Audit Logging** – for every entity or field annotated with @PersonalData; all access and modifications are captured in real time..
+  - ✅ **Tracks CRUD Operations** – Create, Read, Update, Delete on annotated data are fully traced.
   - ✅ **Generates GDPR-Compliant Audit Trails** – Logs are formatted to meet regulatory requirements, simplifying compliance reporting.
 
 ### Step 2: Annotate Personal Data
