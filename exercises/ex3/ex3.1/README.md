@@ -209,7 +209,7 @@ To address the identified vulnerabilities and data privacy risks, this section i
 npm install @cap-js/audit-logging
 ```  
 - Result:
-  - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s [package.json](./pacjkage.json) file.
+  - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s [package.json](./package.json) file.
   - ✅ **Enables Automatic Audit Logging** – for every entity or field annotated with @PersonalData; all access and modifications are captured in real time..
   - ✅ **Tracks CRUD Operations** – Create, Read, Update, Delete on annotated data are fully traced.
   - ✅ **Generates GDPR-Compliant Audit Trails** – Logs are formatted to meet regulatory requirements, simplifying compliance reporting.
