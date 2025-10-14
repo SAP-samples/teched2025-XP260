@@ -1,8 +1,8 @@
 # Getting started
-In the excercises you will use a BTP subaccount with a subaccount admin user. We use the Identity Authentication Service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
+In the exercises you will use a SAP BTP subaccount with a subaccount admin user. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
 
-## Access your BTP subaccount
-Access your BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
+## Access your SAP BTP subaccount
+Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
 Login to open your subaccount XP260_0XX, where XX is your seat number.
 
@@ -11,14 +11,14 @@ Login to open your subaccount XP260_0XX, where XX is your seat number.
 
 ## Review the subscribed services
 
-The BTP Subaccount will have a subscriptions to 
-    - Audit Log Viewer Service
-    - SAP Business Application Studio
-    - SAP Build Work Zone, standard edition
+The SAP BTP subaccount will have subscriptions to 
+- SAP Audit Log Viewer service
+- SAP Business Application Studio
+- SAP Build Work Zone, standard edition
 
-You will be using the cloud foundry runtime environment.
+You will be using the Cloud Foundry Runtime environment.
 
-Check the subscriptions and the environment under Services > Instances and Subscriptions in the BTP Cockpit.
+Check the subscriptions and the environment under Services > Instances and Subscriptions in the SAP BTP cockpit.
 
 ## Review the configured user acess
 
@@ -39,38 +39,38 @@ You will make use of some test users to test the application you are working on.
 - alice.support@company.com (Support user)
 - david.admin@company.com (Admin user)
 
-Check User Role Collections in the BTP cockpit for Bob, Alice and David.
+Check User Role Collections in the SAP BTP cockpit for Bob, Alice, and David.
 
 Select a user. On the right frame check the role collections assigned.
-- Check if bob.support and alice.support are assigned to role collection 'Incident Management Support' 
-- Check if david.admin is assigned to role collection 'Incident Management Admin'
+- Check if bob.support and alice.support are assigned to the role collection 'Incident Management Support'. 
+- Check if david.admin is assigned to the role collection 'Incident Management Admin'.
 
-## Review the Development Environment
+## Review the development environment
  
-As we are using Cloud Foundry, check under Cloud Fondry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
+As we are using Cloud Foundry, check under Cloud Foundry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
 
 Under Cloud Foundry > Spaces, verify the existience of your Space called xp260-0XX.
 
 ## Launch SAP Business Application Studio
 
-Now after these checks, you can open the Business Application Studio. 
+Now after these checks, you can open the SAP Business Application Studio. 
 
-Navigate to Services > Instances and Subscriptions in the BTP Cockpit. Then click on the small Go to Application sign next to the name SAP Business Application Studio.
+Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' sign next to the name SAP Business Application Studio.
 
-On the Logon Screen click on the IDP akihlqzx8.accounts.ondemand.com to login with SSO.
+On the logon screen click on the IDP akihlqzx8.accounts.ondemand.com to login with single sign-on (SSO).
 
-You will see your DEV Space called secure_incident_management. Make sure it is in a running state, if not start it.
-If it is running, click on secure_incident_management to open the SAP Business Application Studio with your incident_management application. In the Workspace on the right side you will find your the incident-management application.
+You will see your DEV Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
+If it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side you will find your incident management application.
 
 Bookmark your SAP Business Application Studio link.
 
 ## Launch SAP Build Work Zone
 
-Go back to the BTP cockpit. click on the Go to Application tile next to the SAP Build Work Zone, standard edition Application to open the Workzone application. 
+Go back to the SAP BTP cockpit. Click on the 'Go to Application' tile next to the SAP Build Work Zone, standard edition application to open the SAP Build Work Zone application. 
 
-Check if the Secure Incident Management Application is present. Open it in a incognito window or a different browserand login with the alice.support user. Bookmark the application. 
+Check if the Secure Incident Management application is present. Open it in an incognito window or a different browser and login with the alice.support user. Bookmark the application. 
 
-Now you are ready to start the excercises. 
+Now you are ready to start the exercises. 
 
 
 ## Summary
