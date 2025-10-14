@@ -20,7 +20,7 @@ You will be using the Cloud Foundry Runtime environment.
 
 Check the subscriptions and the environment under Services > Instances and Subscriptions in the SAP BTP cockpit.
 
-## Review the configured user acess
+## Review the configured user access
 
 Check the users under Security > Users.
 
@@ -28,28 +28,28 @@ Check your user xp260-0XX@education.cloud.sap. He will have two representations 
 
 Check the role collections assigned to the platform user representation:
 - Select the user.
-- In the right frame, check if the role collection Subaccount_Administrator is assigned.
+- In the right frame, check if the role collection 'Subaccount Administrator' is assigned.
 
 Check the role collections assigned to the business user representation:
 - Select the user.
-- In the right frame, check if the role collections Business_Application_Studio_Administrator, Business_Application_Studio_Developer, Business_Application_Studio_Extension_Deployer, and Launchpad_Admin are assigned.
+- In the right frame, check if the role collections 'Business_Application_Studio_Administrator', 'Business_Application_Studio_Developer', 'Business_Application_Studio_Extension_Deployer', and 'Launchpad_Admin' are assigned.
 
 You will make use of some test users to test the application you are working on.
 - bob.support@company.com (Support user)
 - alice.support@company.com (Support user)
 - david.admin@company.com (Admin user)
 
-Check User Role Collections in the SAP BTP cockpit for Bob, Alice, and David.
+Check the user role collections in the SAP BTP cockpit for Bob, Alice, and David:
 
-Select a user. In the right frame, check the role collections assigned.
-- Check if bob.support and alice.support are assigned to the role collection 'Incident Management Support'. 
-- Check if david.admin is assigned to the role collection 'Incident Management Admin'.
+Select a user. In the right frame, check the role collections assigned:
+- Check if bob.support@company.com and alice.support@company.com are assigned to the role collection 'Incident Management Support'. 
+- Check if david.admin@company.com is assigned to the role collection 'Incident Management Admin'.
 
 ## Review the development environment
  
 As we are using Cloud Foundry, check under Cloud Foundry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
 
-Under Cloud Foundry > Spaces, verify the existience of your Space called xp260-0XX.
+Under Cloud Foundry > Spaces, verify the existence of your space called 'xp260-0XX'.
 
 ## Launch SAP Business Application Studio
 
@@ -57,9 +57,9 @@ Now after these checks, you can open the SAP Business Application Studio.
 
 Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' sign next to the name SAP Business Application Studio.
 
-On the logon screen, click on the IDP akihlqzx8.accounts.ondemand.com to login with single sign-on (SSO).
+On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
 
-You will see your DEV Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
+You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
 If it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side, you will find your incident management application.
 
 Bookmark your SAP Business Application Studio link.
