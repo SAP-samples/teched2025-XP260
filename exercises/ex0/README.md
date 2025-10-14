@@ -1,5 +1,5 @@
-# Getting started
-In the exercises you will use a SAP BTP subaccount with a subaccount admin user. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
+# Getting Started
+In the exercises, you will use an SAP BTP subaccount with a subaccount admin user. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
 
 ## Access your SAP BTP subaccount
 Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
@@ -22,17 +22,17 @@ Check the subscriptions and the environment under Services > Instances and Subsc
 
 ## Review the configured user acess
 
-Check the users under Security > Users
+Check the users under Security > Users.
 
 Check your user xp260-0XX@education.cloud.sap. He will have two representations in the cockpit, one as platform user and one as business user. 
 
 Check the role collections assigned to the platform user representation:
 - Select the user.
-- On the right frame check if the role collection Subaccount Administrator is assigned.
+- In the right frame, check if the role collection Subaccount_Administrator is assigned.
 
 Check the role collections assigned to the business user representation:
 - Select the user.
-- On the right frame check if the role collections Business_Application_Studio_Administrator, Business_Application_Studio_Developer, Business_Application_Studio_Extension_Deployer, Launchpad_Admin are assigned.
+- In the right frame, check if the role collections Business_Application_Studio_Administrator, Business_Application_Studio_Developer, Business_Application_Studio_Extension_Deployer, and Launchpad_Admin are assigned.
 
 You will make use of some test users to test the application you are working on.
 - bob.support@company.com (Support user)
@@ -41,7 +41,7 @@ You will make use of some test users to test the application you are working on.
 
 Check User Role Collections in the SAP BTP cockpit for Bob, Alice, and David.
 
-Select a user. On the right frame check the role collections assigned.
+Select a user. In the right frame, check the role collections assigned.
 - Check if bob.support and alice.support are assigned to the role collection 'Incident Management Support'. 
 - Check if david.admin is assigned to the role collection 'Incident Management Admin'.
 
@@ -57,10 +57,10 @@ Now after these checks, you can open the SAP Business Application Studio.
 
 Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' sign next to the name SAP Business Application Studio.
 
-On the logon screen click on the IDP akihlqzx8.accounts.ondemand.com to login with single sign-on (SSO).
+On the logon screen, click on the IDP akihlqzx8.accounts.ondemand.com to login with single sign-on (SSO).
 
 You will see your DEV Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
-If it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side you will find your incident management application.
+If it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side, you will find your incident management application.
 
 Bookmark your SAP Business Application Studio link.
 
