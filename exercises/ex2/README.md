@@ -1,6 +1,14 @@
 # Exercise 2 - SQL injection
 Vulnerability: [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)
 
+## Table of Contents
+- [📖 1. Overview](./README.md#-1-overview)
+- [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
+- [💥 3. Exploitation](./README.md#-3-exploitation)
+- [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
+- [✅ 5. Verification](./README.md#-5-verification)
+- [📌 6. Summary](./README.md#-6-summary)
+
 ## 📖  1. Overview :
 
 This exercise demonstrates how unsanitized user inputs can be exploited to perform SQL Injection attacks, thereby compromising the integrity and confidentiality of enterprise data. In the Incident Management system, input fields—such as those accepting the customer ID, are vulnerable if not properly validated. As a result, attackers might inject malicious SQL code to retrieve, alter, or delete sensitive records without detection.
@@ -22,7 +30,7 @@ This exercise demonstrates how unsanitized user inputs can be exploited to perfo
 - Learn to use CAP’s safe query APIs (parameterized queries) to prevent SQL Injection.
 - Test the remediation to confirm that malicious inputs are neutralized while legitimate application functionality remains intact.
 
-## 🚨 2. Vulnerable Code :
+## 🚨 2. Vulnerable Code:
 We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/README.md)  by introducing an SQL Injection vulnerability resulting from unsanitized user input.
 
 ### What We're Adding
@@ -91,7 +99,7 @@ Copy the contents of [services_vulnerable.js](./srv/services_vulnerable.js) into
 - ❌ **No Input Validation:** The user-supplied customerID is concatenated directly into the SQL query without validation, making it possible for an attacker to inject malicious SQL code.
 - ❌ **Lack of Parameterized Queries:** The raw SQL query does not use parameter binding or prepared statements, leaving the query structure exposed to manipulation.
 
-## 💥 3. Exploitation (TBD with screenshots)
+## 💥 3. Exploitation:
 
 ### Step 1: Create a Test File for HTTP Endpoint:
 - Action :
@@ -341,7 +349,7 @@ The remediation successfully addresses the SQL Injection vulnerability by:
 - **Preserving Legitimate Functionality:** Valid requests continue to work as expected without disruption.
 - **Leveraging Framework Security:** CAP’s built-in query translation to CQN (Core Query Language) and parameter binding prevent SQL injection at runtime.
 
-## 📌 Summary
+## 📌 6. Summary:
 
 ### 🔑 Key Take‑aways (SAP CAP Recommendations)
 Whenever there’s user input involved:
