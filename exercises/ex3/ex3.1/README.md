@@ -3,13 +3,13 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 ## Table of Contents
 - [📖  1. Overview](./README.md#--1-overview-)
-- [🚨 2. Vulnerable Code](./README.md#--1-overview-)
+- [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
 - [💥 3. Exploitation](./README.md#--1-overview-)
 - [🛡️ 4. Remediation](./README.md#--1-overview-)
 - [✅ 5. Verification](./README.md#--1-overview-)
 - [📌 6. Summary](./README.md#--1-overview-)
 
-## 📖  1. Overview :
+## 📖  1. Overview:
 
 This exercise highlights how the absence of audit logging for sensitive data access creates blind spots in enterprise applications. In the Incident Management system, customer records include highly sensitive fields such as credit card numbers. As a result, users can access or exfiltrate regulated data without detection.
 
@@ -31,7 +31,7 @@ This exercise highlights how the absence of audit logging for sensitive data acc
 * Implement object-level authorization, data masking, and audit logging
 * Maintain comprehensive records of access.
 
-## 🚨 2. Vulnerable Code :
+## 🚨 2. Vulnerable Code:
 We’ll build upon [Exercise 2 - SQl Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
 
 **File**: `db/schema.cds`
@@ -135,7 +135,7 @@ module.exports = { ProcessorService }
 - ❌ **No audit logging:** No record of who accessed which customers, when, or what they did.
 - ❌ **Compliance Gap:** Lacks detailed audit records required by regulations like GDPR, SOX, and industry standards.
 
-## 💥 3. Exploitation: (TBD with screenshots)
+## 💥 3. Exploitation:
 In this lab, a **Security Logging and Monitoring Failures** vulnerability is exploited via API calls in a local development environment **(SAP Business Application Studio with cds watch)**. Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
 
 ### Step 1: Start Local Development Server
