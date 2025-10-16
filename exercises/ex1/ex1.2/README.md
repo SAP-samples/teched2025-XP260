@@ -1,6 +1,15 @@
 # Exercise 1.2 - Vertical Privilege Escalation
+Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
-## 📖  1. Overview :
+## Table of Contents
+- [📖  1. Overview](./README.md#--1-overview)
+- [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
+- [💥 3. Exploitation](./README.md#-3-exploitation)
+- [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
+- [✅ 5. Verification](./README.md#-5-verification)
+- [📌 6. Summary](./README.md#-6-summary)
+
+## 📖 1. Overview:
 
 After addressing in [Exercise 1.1 - Horizontal Privilege Escalation](../ex1.1/README.md), the next step is to tackle vertical privilege escalation, which occurs when a user gains access to higher-privileged functions they shouldn't have. 
 In our Incident Management system, this means a support user could perform actions that are reserved for administrators, such as closing high-urgency incidents, or modifying or deleting closed incidents. 
@@ -26,7 +35,7 @@ This violates critical business rules and poses significant risks to the integri
   - Ensure only authorized users can perform sensitive operations
   - Reinforce business logic to mitigate security risks
 
-## 🚨 2. Vulnerable Code
+## 🚨 2. Vulnerable Code:
 we will use exactly the [remediated code from Exercise 1.1.](../ex1.1#%EF%B8%8F-4-remediation). It correctly prevents support users from touching other users’ incidents, but it does not yet enforce admin‑only rules (e.g. closing high‑urgency incidents, modifying closed incidents, deleting any incident).
 
 **File**: `srv/services.cds`
@@ -86,7 +95,7 @@ class ProcessorService extends cds.ApplicationService {
   - ❌ No check for incident urgency when a support user tries to close an incident.
   - ❌ Admin privileges are not enforced at both service (ProcessorService) and CRUD operation level.
     
-## 💥 3. Exploitation (TBD with screenshots)
+## 💥 3. Exploitation:
 
 ### Step 1: Login as Alice (Support User) :
 - Access SAP Build Work Zone.
@@ -119,7 +128,7 @@ class ProcessorService extends cds.ApplicationService {
   - Admin role when modifying closed incidents.
 - ❌ Silent errors for admins reduce transparency and hinder operations.
 
-## 🛡️ 4. Remediation
+## 🛡️ 4. Remediation:
 The fixes follow the principle of least privilege, ensuring support users are blocked from unauthorized actions while admins retain elevated permissions.
 
 ### Key Remediation Steps
@@ -285,7 +294,7 @@ The remediation successfully addresses Vertical Privilege Escalation by:
   - Imperative Security: services.js handlers (e.g., onModify) validate business rules.
   - Defense in Depth: Combined CDS annotations and JavaScript logic prevent bypasses.
 
-## 📌 Summary
+## 📌 6: Summary:
 
 In these exercises, you have learned how to:
   - Mitigate Vertical Privilege Escalation by explicitly defining admin-only operations in @restrict rules.
