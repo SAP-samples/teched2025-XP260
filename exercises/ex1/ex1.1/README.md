@@ -9,7 +9,7 @@ Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_
 - [✅ 5. Verification](./README.md#-5-verification)
 - [📌 6. Summary](./README.md#-6-summary)
 
-## 📖  1. Overview:
+## 📖  1. Overview
 
 Horizontal Privilege Escalation occurs when a user accesses resources belonging to another user at the same privilege level. In our Incident Management system, this means a support user could modify incidents assigned to other support users, violating critical business rules.
 
@@ -26,7 +26,7 @@ Horizontal Privilege Escalation occurs when a user accesses resources belonging 
 - Enforce strict access controls to ensure only authorized users can perform sensitive operations.  
 - Reinforce business logic by preventing unauthorized actions.  
 
-## 🚨 2. Vulnerable Code:
+## 🚨 2. Vulnerable Code
 
 **File**: `db/schema.cds`
 ```cds
@@ -76,12 +76,12 @@ annotate AdminService with @(requires: 'admin');
 - Any support user can UPDATE/DELETE any incident, regardless of assignment.
 
 
-## 💥 3. Exploitation:
+## 💥 3. Exploitation
 
 ### Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
 - Login with alice.support@company.com.
-- Navigate to Incident Management application.
+- Navigate to the Incident Management application.
 
 ### Step 2: Exploit Modifying an Incident
 - Action:
@@ -129,7 +129,7 @@ annotate AdminService with @(requires: 'admin');
 * ❌ **Partial safeguards:** While updates to closed incidents are blocked, deletions remain unrestricted, amplifying risks.
 * ❌ **Security risks:** This enables widespread data tampering and deletion, directly aligning with OWASP Top 10 A01: Broken Access Control.
 
-## 🛡️ 4. Remediation:
+## 🛡️ 4. Remediation
 The fix requires both database schema changes and service-level security implementation.
 
 ### Step 1: Add Assignment Tracking to Database Schema
@@ -358,20 +358,20 @@ AssignedTo=Assigned To
 ```
 Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
 
-## ✅ 5. Verification:
+## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
 
 ### Step 1: Deploy the Updated Application to Cloud Foundry
-- Open a terminal window
-  - In the explorer pane, right-click on the project name to open the context menu
-  - Select the menu item "Open in Integrated Terminal"
-- Login with the cloud foundry command line interface
+- Open a terminal window.
+  - In the Explorer Pane, right-click on the project name to open the context menu.
+  - Select the menu item "Open in Integrated Terminal".
+- Login with the Cloud Foundry command line interface.
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
-- Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password
-- As you are only assigned to one org and one space, these are selected automatically
-- Start the build
+- Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password.
+- As you are only assigned to one org and one space, these are selected automatically.
+- Start the build.
   ```
   mbt build
   cf deploy mta_archives/incident-management_1.0.0.mtar
@@ -397,7 +397,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   - ❌ The UI shows a 403 Forbidden error (or "Access denied" message).
   - ✅ This confirms that the where: 'assignedTo = $user' condition is effectively enforced — Alice cannot access Bob’s incident, even though both are support users, 👉 This resolves the horizontal privilege escalation vulnerability.
  
-### Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's name
+### Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's Name
 - Action:
   - Locate a closed incident (e.g., one with status "C").
   - Click "Edit" and make changes.
@@ -416,9 +416,9 @@ This section outlines the steps to confirm that the remediation for the Horizont
 The remediation is successful in combination of :
 - Adding the 'assignedTo' field in schema.cds.
 - Implementing @restrict with where: 'assignedTo = $user'.
-- Enforcing business rules in services.js, eliminates horizontal privilege escalation and enforces the principle of least privilege.
+- Enforcing business rules in services.js, eliminates Horizontal Privilege Escalation and enforces the principle of least privilege.
   
-## 📌 6. Summary:
+## 📌 6. Summary
 
 In these exercises, you have learned how:
 
