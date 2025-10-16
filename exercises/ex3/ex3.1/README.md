@@ -218,7 +218,7 @@ npm install @cap-js/audit-logging
 
 - Action : 
   - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into a new project’s /srv/data-privacy.cds file.
-  - Open 'data-privacy.cds' from your project and and make sure the annotations for Customers, Addresses, Incidents, and Incidents:conversation are present—exactly as shown here. 
+  - Open 'data-privacy.cds' from your project and make sure the annotations for Customers, Addresses, Incidents, and Incidents:conversation are present—exactly as shown here. 
 
 ```
 using { sap.capire.incidents as my } from './services';
