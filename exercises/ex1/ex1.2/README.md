@@ -2,7 +2,7 @@
 Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
 ## Table of Contents
-- [📖  1. Overview](./README.md#--1-overview)
+- [📖  1. Overview](./README.md#-1-overview)
 - [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
 - [💥 3. Exploitation](./README.md#-3-exploitation)
 - [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
