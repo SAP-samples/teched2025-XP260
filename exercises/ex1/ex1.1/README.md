@@ -1,7 +1,15 @@
 # Exercise 1.1 - Horizontal Privilege Escalation
 Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
-## 📖  1. Overview
+## Table of Contents
+- [📖  1. Overview](./README.md#--1-overview)
+- [🚨 2. Vulnerable Code](./README.md#-2-vulnerable-code)
+- [💥 3. Exploitation](./README.md#-3-exploitation)
+- [🛡️ 4. Remediation](./README.md#%EF%B8%8F-4-remediation)
+- [✅ 5. Verification](./README.md#-5-verification)
+- [📌 6. Summary](./README.md#-6-summary)
+
+## 📖  1. Overview:
 
 Horizontal Privilege Escalation occurs when a user accesses resources belonging to another user at the same privilege level. In our Incident Management system, this means a support user could modify incidents assigned to other support users, violating critical business rules.
 
@@ -18,7 +26,7 @@ Horizontal Privilege Escalation occurs when a user accesses resources belonging 
 - Enforce strict access controls to ensure only authorized users can perform sensitive operations.  
 - Reinforce business logic by preventing unauthorized actions.  
 
-## 🚨 2. Vulnerable Code
+## 🚨 2. Vulnerable Code:
 
 **File**: `db/schema.cds`
 ```cds
@@ -68,7 +76,7 @@ annotate AdminService with @(requires: 'admin');
 - Any support user can UPDATE/DELETE any incident, regardless of assignment.
 
 
-## 💥 3. Exploitation (TBD with screenshots)
+## 💥 3. Exploitation:
 
 ### Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
@@ -121,7 +129,7 @@ annotate AdminService with @(requires: 'admin');
 * ❌ **Partial safeguards:** While updates to closed incidents are blocked, deletions remain unrestricted, amplifying risks.
 * ❌ **Security risks:** This enables widespread data tampering and deletion, directly aligning with OWASP Top 10 A01: Broken Access Control.
 
-## 🛡️ 4. Remediation
+## 🛡️ 4. Remediation:
 The fix requires both database schema changes and service-level security implementation.
 
 ### Step 1: Add Assignment Tracking to Database Schema
@@ -350,7 +358,7 @@ AssignedTo=Assigned To
 ```
 Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
 
-## ✅ 5. Verification
+## ✅ 5. Verification:
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
 
 ### Step 1: Deploy the Updated Application to Cloud Foundry
@@ -410,7 +418,7 @@ The remediation is successful in combination of :
 - Implementing @restrict with where: 'assignedTo = $user'.
 - Enforcing business rules in services.js, eliminates horizontal privilege escalation and enforces the principle of least privilege.
   
-## 📌 Summary
+## 📌 6. Summary:
 
 In these exercises, you have learned how:
 
