@@ -1,4 +1,4 @@
-# Exercise 3.1 - Audit Logging for Sensitive Data Access
+# Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Developement
 Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
 
 ## Table of Contents
