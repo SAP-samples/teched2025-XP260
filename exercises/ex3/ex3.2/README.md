@@ -16,9 +16,9 @@ In this exercise you will extend the local audit-logging setup from [Exercise 3.
 
 ## 2. 📋 Prerequisites
 
-* Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access](../ex3.1/README.md) (local audit‐logging using @cap-js/audit-logging, including @PersonalData annotations, the server.js custom logging handler, and successful local validation of SensitiveDataRead, PersonalDataModified, and SecurityEvent logs).
+* Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access](../ex3.1/README.md).
 * SAP Work Zone Standard Edition configured and accessible.
-* The SAP Audit Log Viewer service has already been subscribed to in your Enterprise BTP subaccount with the standard plan. No further subscription is required.
+* The SAP Audit Log Viewer service has already been subscribed to in your Enterprise BTP subaccount with the standard plan.
 
 ## 3. 🪜 Step-by-Step Procedure
 
