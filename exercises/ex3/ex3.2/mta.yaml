@@ -204,7 +204,6 @@ resources:
             description: 'generated'
             role-template-references:
               - '$XSAPPNAME.admin'
-
   - name: incident-management-auditlog
     type: org.cloudfoundry.managed-service
     parameters:
