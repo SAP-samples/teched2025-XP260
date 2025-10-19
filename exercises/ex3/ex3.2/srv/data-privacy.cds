@@ -33,8 +33,9 @@ annotate my.Incidents with @PersonalData : {
   status          @PersonalData.IsPotentiallyPersonal;
   assignedTo      @PersonalData.IsPotentiallyPersonal;              // Email of assigned support user
 }
-
 // Annotate the conversation element of Incidents
-annotate my.Incidents:conversation with @PersonalData {
-  message @PersonalData.IsPotentiallySensitive;  // Messages may include sensitive details
+annotate my.Incidents.conversation with @PersonalData : {
+  EntitySemantics : 'Other'
+} {
+  message         @PersonalData.IsPotentiallySensitive;
 };
