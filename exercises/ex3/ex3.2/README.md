@@ -161,9 +161,9 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 #### 🪜 Step 4. Simulate a Support User Accessing and Updating Sensitive Incident Data
 
 - **Action:**
- - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
- - Navigate to the list of incidents and select a record.
- - Modify one or more fields (e.g., Customer, Title, Urgency, Status,Message ) within the record and save your updates.
+  - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
+  - Navigate to the list of incidents and select a record.
+  - Modify one or more fields (e.g., Customer, Title, Urgency, Status,Message ) within the record and save your updates.
 
 * **Result: The incident record is successfully updated**, and the UI reflects the changes.
 
