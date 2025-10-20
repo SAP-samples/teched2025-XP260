@@ -119,7 +119,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
    mbt build
  ```
 
-- **Result:** An MTAR archive (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
+- **Result:** An **MTAR archive** (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
 
 - **Action: Deploy the MTA**
   - Locate the generated .mtar file in the mta_archives/ directory.
