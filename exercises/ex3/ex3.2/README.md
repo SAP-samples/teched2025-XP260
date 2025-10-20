@@ -150,7 +150,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
      * Service: auditlog
      * Plan: standard
 
-- **Result: The audit log service binding is confirmed as active and correctly configured, along with other required services.** see screenshot:
+- **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. see screenshot:
 
   <p align="center">
     <img src="images/audit-log-application-binding.png" alt="" width="900"/>
