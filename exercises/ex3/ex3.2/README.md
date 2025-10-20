@@ -193,8 +193,37 @@ To address the identified vulnerability of insufficient logging for sensitive in
   - **Personal Data Annotation** – Explicitly tags sensitive fields in incident records for GDPR compliance.
   - **Automated Audit Logging** – Tracks all access and modifications to protected data with @cap-js/audit-logging.
 
+#### 🪜 Step 1. Annotate Personal Data for Incidents
 
+**Action:**
+  - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into project’s /srv/data-privacy.cds file.
+  - Open 'data-privacy.cds' from your project and make sure the annotations for Incidents, and Incidents.conversation are present—exactly as shown here.
 
+```
+using { sap.capire.incidents as my } from './services';
 
+... // Customer Annotations
 
+... // Addresses Annotations
 
+// Annotating the my.Incidents entity with @PersonalData to enable data privacy
+annotate my.Incidents with @PersonalData : {
+  EntitySemantics : 'DataSubjectDetails'                            // Incidents relate to data subjects (customers)
+} {
+  customer        @PersonalData.FieldSemantics : 'DataSubjectID';   // Link to customer
+  title           @PersonalData.IsPotentiallyPersonal;              // May contain PII
+  urgency         @PersonalData.IsPotentiallyPersonal;
+  status          @PersonalData.IsPotentiallyPersonal;
+  assignedTo      @PersonalData.IsPotentiallyPersonal;              // Email of assigned support user
+}
+// Annotate the conversation element of Incidents
+annotate my.Incidents.conversation with @PersonalData : {
+  EntitySemantics : 'Other'
+} {
+  message         @PersonalData.IsPotentiallySensitive;
+};
+
+```
+- Result:
+  - ✅ Audit logs automatically include these incident fields (customer, title, urgency, status, assignedTo, message) in tracking, ensuring data privacy and regulatory adherence.
+  - ✅ Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
