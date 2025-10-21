@@ -304,7 +304,7 @@ In this section, you will verify that the remediation has successfully resolved 
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
   - 
-- **Result: ✅ – The audit log now displays comprehensive details for each field modification**, see screenshot
+- ✅ **Result:  – The audit log now displays comprehensive details for each field modification**, see screenshot
 
     <p align="center">
     <img src="images/audit-log-data-modification.png" alt="" width="900"/>
