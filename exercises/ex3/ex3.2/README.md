@@ -199,7 +199,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - **Result: ✅ The auditlog-viewer role collection is now assigned to your user account, enabling you to access the SAP Audit Log Viewer service.**, see screenshot
 
     <p align="center">
-    <img src="images/audit-log-application-role-collection.png" alt="" width="900"/>
+    <img src="images/audit-log-application-role-collections.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
