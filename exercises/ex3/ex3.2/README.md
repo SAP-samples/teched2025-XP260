@@ -276,45 +276,33 @@ In this section, you will verify that the remediation has successfully resolved 
   - Run the following commands to build the updated MTA with the corrected data-privacy.cds annotations:
   ```
    mbt build
+  
    cf deploy mta_archives/<mtar_name>.mtar
   ```
 - **Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
 
 #### 🪜 Step 2. Simulate Authorized Data Modification and Verify Comprehensive Logging
 
-  
+- **Action: Perform an Authorized Modification**
+   - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
+   - Navigate to the list of incidents and select an incident assigned to you.
+   - Modify one or more sensitive fields:
+     - Title – Change the incident title
+     - Urgency – Update the priority level
+     - Status – Move to a different status (e.g., from "open" to "in-progress")
+     - Message – Add a new conversation message with additional context
+   - Save your updates and confirm the changes appear in the UI.
 
+- **Result: ✅ The incident record is successfully updated without any access denial errors.**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+- **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
+   - Log in to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
+   - Login with your user (e.g., XP260-0xx@education.cloud.sap)
+   - Apply the following filters:
+     - Event Type: data-modification
+     - Date/Time Range: Set the range to match when you performed the modification (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
+     - User: Filter by the support user account (e.g., alice.support@company.com)
+  - Execute the filter query to retrieve the log entries.
+  - Locate the log entry corresponding to your incident modification.
+  - 
+- **Result: ✅ – The audit log now displays comprehensive details for each field modification, see screenshot
