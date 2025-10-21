@@ -307,14 +307,14 @@ In this section, you will verify that the remediation has successfully resolved 
 - ✅ **Result:**
   - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in Step 5 of Exploitation, the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
 
-- Complete traceability achieved – Each modification entry includes:
-  - The specific fields that were changed
-  - The exact values before and after modification
-  - The user who made the change (alice.support@company.com)
-  - The precise timestamp of the modification.
-  - The object type 'ProcessorService.Incidents and subject type 'ProcessorService.Customers'
+  - Complete traceability achieved – Each modification entry includes:
+    - The specific fields that were changed
+    - The exact values before and after modification
+    - The user who made the change (alice.support@company.com)
+    - The precise timestamp of the modification.
+    - The object type 'ProcessorService.Incidents and subject type 'ProcessorService.Customers'
 
-- Vulnerability fully remediated – Insufficient logging is resolved, with comprehensive audit trails ensuring GDPR compliance and enhanced data privacy. see screenshot
+  - Vulnerability fully remediated – Insufficient logging is resolved, with comprehensive audit trails ensuring GDPR compliance and enhanced data privacy. see screenshot
 
     <p align="center">
     <img src="images/audit-log-data-modifications.png" alt="" width="900"/>
