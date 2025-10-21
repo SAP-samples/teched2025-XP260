@@ -95,11 +95,11 @@ annotate AdminService with @(requires: 'admin');
   - Click "Save".
 - Result:
   - ❌ The system allows Alice to modify and save ANY non-closed incident.
-  - ❌ Root Cause: No 'assignedTo' field,  means no ownership tracking possible.
+  - ❌ Root Cause: No 'assignedTo' field,  means no ownership tracking is possible.
  
 ### Step 3: Attempt Updating a Closed Incident
 - Action:
-  - Navigate to a closed incident (e.g., one with status "C").
+  - Navigate to a closed incident (e.g., one with status "Closed").
   - Click "Edit".
   - Try to modify the incident details (e.g., change the title or add a conversation entry).
   - Click "Save".
@@ -115,7 +115,7 @@ annotate AdminService with @(requires: 'admin');
   - Confirm deletion when prompted (e.g., "Are you sure you want to delete this incident?").
 - Result:
   - ❌ The system allows Alice to delete ANY incident.
-  - ❌ Root Cause: No 'assignedTo' field, means no ownership tracking possible.
+  - ❌ Root Cause: No 'assignedTo' field, means no ownership tracking is possible.
     
 ### Step 5: Test with Another User
 - Action:
@@ -289,10 +289,10 @@ add the following parts in the code:
 
 **annotations.cds file:**
   - **General Information:** Add assignedTo field to UI.FieldGroup #GeneratedGroup
-  - **Selection Fields:** Added assignedTo to UI.SelectionFields for filtering/sorting
+  - **Selection Fields:** Add assignedTo to UI.SelectionFields for filtering/sorting
 
 **i18n.properties file:**
-  - Added new property: AssignedTo=Assigned To
+  - Add new property: AssignedTo=Assigned To
 
 **File**: app/incidents/annotations.cds changes:
 
@@ -379,7 +379,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
 
 ### Step 2: Login as Alice (Support User)
 - Action:
-  - Access SAP Build Work Zone and log in with alice.support@company.com.
+  - Access SAP Build Work Zone and log in with alice.support@company.com. (Note: Make sure to refresh the application first.)
   - In the incident list, locate an incident assigned to Alice (e.g., "Strange noise when switching off Inverter").
   - Confirm the 'Assigned To' column displays alice.support@company.com.
   - Click on the incident to open its details.
@@ -395,11 +395,11 @@ This section outlines the steps to confirm that the remediation for the Horizont
 - Result:
   - ❌ The system blocks the edit attempt.
   - ❌ The UI shows a 403 Forbidden error (or "Access denied" message).
-  - ✅ This confirms that the where: 'assignedTo = $user' condition is effectively enforced — Alice cannot access Bob’s incident, even though both are support users, 👉 This resolves the horizontal privilege escalation vulnerability.
+  - ✅ This confirms that the where: 'assignedTo = $user' condition is effectively enforced — Alice cannot access Bob’s incident, even though both are support users. 👉 This resolves the Horizontal Privilege Escalation vulnerability.
  
 ### Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's Name
 - Action:
-  - Locate a closed incident (e.g., one with status "C").
+  - Locate a closed incident (e.g., one with status "Closed").
   - Click "Edit" and make changes.
   - Click "Save". If editing is not possible, attempt to select the incident and click "Delete".
 - Result:
@@ -413,7 +413,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
 - Result: ✅ The system allows the modification, as per the remediated rule (where: 'assignedTo is null or assignedTo = $user'), demonstrating that unassigned incidents are accessible to support users.
 
 ## 📌 Verification Summary
-The remediation is successful in combination of :
+The remediation is successful in combination of:
 - Adding the 'assignedTo' field in schema.cds.
 - Implementing @restrict with where: 'assignedTo = $user'.
 - Enforcing business rules in services.js, eliminates Horizontal Privilege Escalation and enforces the principle of least privilege.
