@@ -120,14 +120,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - **Result:** An **MTAR archive** (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
   
-- **Action: Deploy the MTA**
+- ▶️ **Action: Deploy the MTA**
   - Locate the generated .mtar file in the mta_archives/ directory.
   - Run the following command in your terminal to deploy it:
 
 ```
  cf deploy mta_archives/<mtar_name>.mtar
 ```
-- **Result: The deployment succeeds**, and the vulnerable application is now running in your SAP BTP Cloud Foundry environment.
+- ✅ **Result: The deployment succeeds**, and the vulnerable application is now running in your SAP BTP Cloud Foundry environment.
 
 #### 🪜 Step 3. Verify the Deployment (Optional)
 
@@ -296,7 +296,7 @@ In this section, you will verify that the remediation has successfully resolved 
 - **Result: ✅ The incident record is successfully updated without any access denial errors.**
 
 - **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
-   - Log in to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
+   - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
    - Login with your user (e.g., XP260-0xx@education.cloud.sap)
    - Apply the following filters:
      - Event Type: data-modification
