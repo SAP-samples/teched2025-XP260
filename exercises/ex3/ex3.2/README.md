@@ -17,16 +17,16 @@ In this exercise you will extend the local audit-logging setup from [Exercise 3.
 
 ### 🎯 Key Learning Objectives
 
+  * Design and implement comprehensive audit logging eventd that tracks and validates authenticated access to sensitive data endpoints.
   * Bind the managed SAP Audit Log Service to your Incident Management application.
   * Build and Deploy the incident management application  on the SAP BTP Cloud Foundry runtime.
-  * Design and implement comprehensive audit logging eventd that tracks and validates authenticated access to sensitive data endpoints.
   * Use the SAP Audit Log Viewer to access, filter, and analyze audit trails with full context (user, timestamp, action, resource)
 
 ## 📋 Prerequisites
 
 * Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access](../ex3.1/README.md).
 * SAP Work Zone Standard Edition configured and accessible.
-* The SAP Audit Log Viewer service has already been subscribed to in your Enterprise BTP subaccount with the standard plan.
+* The SAP Audit Log Viewer service has already been subscribed to in your SAP BTP subaccount with the standard plan.
 
 ## 🚨 2. Vulnerable Code:
 Your existing [data-privacy.cds](../ex3.1/srv/data-privacy.cds) file only covers the Customers and Addresses entities. However, it is missing annotations for the Incidents entity and its conversation element. This gap can lead to significant privacy and compliance risks.
