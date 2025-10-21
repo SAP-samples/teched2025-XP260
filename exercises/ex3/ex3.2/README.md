@@ -295,15 +295,23 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - ✅**Result: The incident record is successfully updated without any access denial errors.**
 
-
 - ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
    - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
-   - Login with your user (e.g., XP260-0xx@education.cloud.sap)
    - Apply the following filters:
-     - Event Type: data-modification
+     - Event Type: data-modification, data-access
      - Date/Time Range: Set the range to match when you performed the modification (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
      - User: Filter by the support user account (e.g., alice.support@company.com)
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
   - 
 - **Result: ✅ – The audit log now displays comprehensive details for each field modification**, see screenshot
+
+    <p align="center">
+    <img src="images/audit-log-data-modification.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+
+
+
