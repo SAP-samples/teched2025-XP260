@@ -228,8 +228,8 @@ To address the identified vulnerability of insufficient logging for sensitive in
 #### 🪜 Step 1. Annotate Personal Data for Incidents
 
 - ▶️ **Action:**
-  - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into project’s /srv/data-privacy.cds file.
-  - Open 'data-privacy.cds' from your project and make sure the annotations for Incidents, and Incidents.conversation are present—exactly as shown here.
+  - Copy the contents of **[data-privacy.cds](./srv/data-privacy.cds)** into project’s **/srv/data-privacy.cds** file.
+  - Open **data-privacy.cds** file from your project and make sure the annotations for Incidents, and Incidents.conversation are present—exactly as shown here.
 
 ```
 using { sap.capire.incidents as my } from './services';
