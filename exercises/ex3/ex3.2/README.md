@@ -270,10 +270,52 @@ annotate my.Incidents.conversation with @PersonalData : {
 
 ## ✅ 5. Verification
 In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
+ 
+ - *(Optional)* Verify conversation data retrieval and logging in your local development environment.
  - Verify that authorized modifications to sensitive data are correctly logged with full detail, capturing the context of the change.
  - Verify unauthorized access attempts are blocked and logged as **Security Events**.
- 
- #### 🪜 Step 1. Rebuild and Deploy the Remediated Application
+
+#### 🪜 Step 1. Retrieve Conversation Details for Local Development (Optional)
+-  ⚠️ **Note:** This optional step allows you to verify the audit logging functionality and conversation details in your local development environment before performing end-to-end testing in the cloud.
+
+- ▶️ **Action:**
+  - Ensure cds watch is running in your terminal. Start it if needed:
+
+  ```
+   cds watch
+  ```
+  - Open the test/http/incident-conversations.http file from your project.
+  - Ensure that the username is set to **alice (support user)**. The password should be left empty.
+  - Click on 'Send Request' to run 'GET {{server}}/odata/v4/processor/Incidents?$expand=conversation' request.
+
+- ✅ **Result:**
+  - Here is a sample audit log output showing SensitiveDataRead events for incident conversation data. In your log, the timestamp matches the current timestamp:
+
+  ```
+  ... Other logs
+  [audit-log] - SensitiveDataRead: {
+    data_subject: {
+      id: { ID: '1004100' },
+      role: 'Customer',
+      type: 'ProcessorService.Customers'
+    },
+    object: {
+      type: 'ProcessorService.Incidents.conversation',
+      id: {
+        up__ID: 'de6a36d1-098c-4429-9dd9-eb3fb1078ce7',
+        ID: '24227258-de86-4e64-9386-dbca83cc27b8'
+      }
+    },
+    attributes: [ { name: 'message' } ],
+    uuid: '8b8a528b-3346-4176-844c-8c6e099bf45d',
+    tenant: undefined,
+    user: 'alice',
+    time: 2025-10-22T10:16:39.514Z
+  } 
+  ```
+-  ⚠️ **Note:** To generate detailed audit log entries for create, update, or delete operations on incidents and conversations entities, open and run HTTP requests from the ProcessorService.http file. Each request will trigger corresponding audit log events (SensitiveDataRead, PersonalDataModified, or SecurityEvent) visible in the terminal.
+
+ #### 🪜 Step 2. Rebuild and Deploy the Remediated Application
 
 - ▶️ **Action: Build and Deploy the Updated MTA**
   - Open a terminal and navigate to the project root directory.
