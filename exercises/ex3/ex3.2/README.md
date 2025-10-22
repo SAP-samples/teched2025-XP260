@@ -83,8 +83,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     ```
       cds add audit-logging --plan standard
     ```
-- ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
-  
+
   - Open [mta.yaml](./mta.yaml) and scroll to the line 207 - **resources:** section (no edit required).
   - Confirm the following resource exists under the **resources:** section
 
@@ -101,6 +100,9 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     requires:
       - name: incident-management-auditlog    
     ```
+
+- ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
+  
 
 #### 🪜 Step 2. Build and deploy the CAP appplication
 
