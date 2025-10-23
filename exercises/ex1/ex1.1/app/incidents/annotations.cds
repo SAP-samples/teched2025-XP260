@@ -54,32 +54,53 @@ annotate service.Incidents with @(
             $Type : 'UI.DataField',
             Value : title,
             Label : '{i18n>Title}',
+            // 🔄 NEW: Added UI annotations for dynamic resizing
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto', // Set to auto to allow dynamic resizing
+            }
         },
         {
             $Type : 'UI.DataField',
             Value : customer.name,
             Label : '{i18n>Customer}',
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
         },
         {
             $Type : 'UI.DataField',
             Value : status.descr,
             Label : '{i18n>Status}',
             Criticality : status.criticality,
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
         },
         {
             $Type : 'UI.DataField',
             Value : urgency.descr,
             Label : '{i18n>Urgency}',
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
         },
         // ✅ ADDED: Show assigned user in the list view
         {
             $Type : 'UI.DataField',
             Value : assignedTo,
             Label : '{i18n>AssignedTo}',
+            UI.LineItem : {
+                $Type : 'UI.LineItemType',
+                Width : 'auto',
+            }
         },
 
     ],
-// Added PresentationVariant to explicitly control column order and visibility in the table
+    // Added PresentationVariant to explicitly control column order and visibility in the table
     UI.PresentationVariant: {
         $Type: 'UI.PresentationVariantType',
         Visualizations: [
@@ -88,20 +109,24 @@ annotate service.Incidents with @(
                 Qualifier: 'IncidentsList', // Use the correct qualifier if different (e.g., your list report's qualifier)
                 Visualization: {
                     $Type: 'UI.Table',
-                    // ✅ NEW: Explicitly define the default visible columns and their order
                     ColumnOrder: [
                         { Value: title },
                         { Value: customer.name },
                         { Value: urgency.descr },
                         { Value: status.descr },
                         { Value: assignedTo } // Make sure 'assignedTo' is included here
-                    ]
+                    ],
+                    // 🔄 NEW: Added UI annotations for dynamic resizing
+                    UI.TableSettings : {
+                        $Type : 'UI.TableSettingsType',
+                        AutoResizeColumns : true, // Enable auto-resizing of columns
+                    }
                 }
             }
         ]
     },
 
-        //  ✅ ADDED: assignedTo field to UI.FieldGroup #GeneratedGroup
+    //  ✅ ADDED: assignedTo field to UI.FieldGroup #GeneratedGroup
     UI.SelectionFields : [
         status_code,
         urgency_code,
