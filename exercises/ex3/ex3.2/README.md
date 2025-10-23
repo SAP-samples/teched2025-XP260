@@ -428,6 +428,5 @@ In this section, you will verify that the remediation has successfully resolved 
   - **Production-grade monitoring** – SAP Audit Log Viewer enables real-time visibility into security events and regulatory compliance.
   - **Complete context matters** – Audit logs captures user, timestamp, resource, action, and data changes for effective investigation.
 
-- 🎉 **Congratulations!**  
-  You have successfully remediated the **[A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)** vulnerability and transformed your application into an **enterprise-grade, audit-compliant system** ready for production use and regulatory scrutiny.
+- 🎉 **Congratulations!:** You have successfully remediated the **[A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)** vulnerability and transformed your application into an **enterprise-grade, audit-compliant system** ready for production use and regulatory scrutiny.
 
