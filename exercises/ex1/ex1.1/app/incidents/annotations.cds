@@ -114,9 +114,9 @@ annotate service.Incidents with @(
                     ColumnOrder: [
                         { Value: title },
                         { Value: customer.name },
+                        { Value: assignedTo }, // Make sure 'assignedTo' is included here
                         { Value: urgency.descr },
-                        { Value: status.descr },
-                        { Value: assignedTo } // Make sure 'assignedTo' is included here
+                        { Value: status.descr }
                     ],
                     // 🔄 NEW: Added UI annotations for dynamic resizing
                     UI.TableSettings : {
