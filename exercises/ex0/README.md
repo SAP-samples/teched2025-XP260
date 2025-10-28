@@ -68,7 +68,7 @@ Bookmark your SAP Business Application Studio link.
 
 ## Launch SAP Build Work Zone
 
-Go back to the SAP BTP cockpit. Click on the 'Go to Application' tile next to the SAP Build Work Zone, standard edition application to open the SAP Build Work Zone application. 
+Go back to Services > Instances and Subscriptions in the SAP BTP cockpit. Click on the 'Go to Application' icon next to the SAP Build Work Zone, standard edition application to open the SAP Build Work Zone application. 
 
 Check if the Secure Incident Management application is present. Open it in an incognito window or a different browser and login with the alice.support@company.com user. Bookmark the application. 
 
