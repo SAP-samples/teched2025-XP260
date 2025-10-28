@@ -371,7 +371,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   ```
 - Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password.
 - As you are only assigned to one org and one space, these are selected automatically.
-- Start the build.
+- Start the build and deploy the new version. These steps may take a few minutes.  
   ```
   mbt build
   cf deploy mta_archives/incident-management_1.0.0.mtar
