@@ -2,7 +2,7 @@
 Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
 ## 📖 Overview
-Broken Access Control  is the most critical web application security risk, according to the [OWASP Top 10 2021 list (A01)](https://owasp.org/Top10/A01_2021-Broken_Access_Control/). It occurs when an application fails to enforce proper authorization, allowing users to view or modify resources they are not permitted to access. When access control is broken, threat actors can act outside of their intended permissions. This can manifest in several ways:
+Broken Access Control  is the most critical web application security risk, according to the [OWASP Top 10 2021 list (A01)](https://owasp.org/Top10/A01_2021-Broken_Access_Control/). It occurs when an application fails to enforce proper authorization, allowing users to view or modify resources they are not permitted to access. When access control is broken, threat actors can act outside of their intended permissions. This can manifest itself in several ways:
 
 - **Horizontal Privilege Escalation :** When a user gains access to another user’s data or actions at the same privilege level.
 - **Vertical Privilege Escalation :** When a user gains higher‑level privileges, such as performing admin‑level operations.
