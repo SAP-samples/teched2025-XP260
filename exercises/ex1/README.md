@@ -25,8 +25,8 @@ CAP provides a multi-layered security approach:
 - **Authentication:** Verifies the user identity (managed by XSUAA/Identity Authentication service).
 
 - **Authorization:** Controls what authenticated users can do.
-    - Role-based (@requires annotations)
-    - Instance-based (@restrict annotations)
+    - Role-based (`@requires` annotations)
+    - Instance-based (`@restrict` annotations)
     - Programmatic checks (in service handlers)
 
 There are two exercises related to this topic.
