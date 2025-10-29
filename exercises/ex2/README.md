@@ -366,7 +366,7 @@ Whenever there’s user input involved:
 - In this exercise, you have learned how to:
   
   - **Identify SQL Injection Vulnerabilities:** Recognize unsafe patterns like direct string interpolation in queries.
-  - **Implement Parameterized Queries:** Use CAP’s API `SELECT.from().where() to securely handle user input.
+  - **Implement Parameterized Queries:** Use CAP’s API `SELECT.from().where()` to securely handle user input.
   - **Test Remediation:** Verify the fix via the HTTP endpoint by testing that valid inputs succeed and SQL Injection attempts are blocked.
 
 - 🎉 **Congratulations!**
