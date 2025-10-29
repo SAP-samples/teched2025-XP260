@@ -344,9 +344,9 @@ In this section, you will verify that the remediation has successfully resolved 
      - Urgency – Update the priority level
      - Status – Move to a different status (e.g., from "open" to "in-progress")
      - Message – Add a new conversation message with additional context
-  - Save your updates and confirm the changes appear in the UI.
+  - Save your updates and confirm that the changes appear in the UI.
 
-- ✅**Result: The incident record is successfully updated without any access denial errors.**
+- ✅**Result: The incident record is successfully updated without any access denied errors.**
 
 - ▶️ **Action: Access the SAP Audit Log Viewer service and Verify Detailed Logging**
   - Log in  with your user (e.g., **XP260-0xx@education.cloud.sap**) to the SAP BTP cockpit and navigate to the **SAP Audit Log Viewer service**.
