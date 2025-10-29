@@ -96,9 +96,9 @@ The solution diagram illustrates the key components and their interactions withi
   - Select a user. In the right frame, check the role collections assigned:
   - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
   - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
- 
-   <p align="center">
-    <img src="images/images/btp-configured_user_application.png" alt="" width="900"/>
+
+ <p align="center">
+    <img src="images/btp-configured_user_application.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
