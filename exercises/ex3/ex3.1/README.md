@@ -471,17 +471,17 @@ This section evaluates the implementation of audit logging and data protection i
 
 ### 📌 Verification Summary 
 Verification confirmed that:
-  * All sensitive fields (e.g., creditCardNo) are annotated with @PersonalData, masked in API responses, and tracked in audit logs.
+  * All sensitive fields (e.g., creditCardNo) are annotated with `@PersonalData`, masked in API responses, and tracked in audit logs.
   * Role-based access controls enforce least-privilege, effectively blocking unauthorized data exposure.
-  * Audit logs  capture every critical event (SensitiveDataRead, PersonalDataModified, SecurityEvent) with full contextual details.
-  * @PersonalData.IsPotentiallyPersonal → Audit logs are triggered for modification events only (create, update, delete).
-  * @PersonalData.IsPotentiallySensitive → Audit logs are triggered for both modification and read (access) events.
+  * Audit logs  capture every critical event (`SensitiveDataRead`, `PersonalDataModified`, `SecurityEvent`) with full contextual details.
+  * `@PersonalData.IsPotentiallyPersonal` → Audit logs are triggered for modification events only (create, update, delete).
+  * `@PersonalData.IsPotentiallySensitive` → Audit logs are triggered for both modification and read (access) events.
 
 
     
 ## 📌 6. Summary
 In this exercise, you have learned how:
-* To implement data masking and audit logging for sensitive fields (e.g., creditCardNo) using @PersonalData annotations and the @cap-js/audit-logging plugin.
+* To implement data masking and audit logging for sensitive fields (e.g., creditCardNo) using `@PersonalData` annotations and the `@cap-js/audit-logging` plugin.
 * To enforce strict role-based access controls that prevent unauthorized data exposure while ensuring all administrator operations are audited.
 * To generate comprehensive security event logs for unauthorized access attempts, enabling regulatory compliance with PCI-DSS and GDPR requirements.
 
