@@ -206,12 +206,12 @@ Results :
 ## 🛡️ 4. Remediation
 To address the identified vulnerabilities and data privacy risks, this section implements CAP's built-in security controls through:
   1. **Personal Data Annotation** - Explicitly tags sensitive fields for GDPR compliance.
-  2. **Automated Audit Logging** - Tracks all access to protected data with @cap-js/audit-logging.
+  2. **Automated Audit Logging** - Tracks all access to protected data with `@cap-js/audit-logging`.
   3. **Fine-Grained Access Control** - Limits customer data visibility by user role.
 
 ### Step 1: Add Audit Logging Dependency
 
-- Action : Add the @cap-js/audit-logging plugin to your project.
+- Action : Terminate the cds watch command. Then add the `@cap-js/audit-logging` plugin to your project.
 
 ```
 npm install @cap-js/audit-logging
