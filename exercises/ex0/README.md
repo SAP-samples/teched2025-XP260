@@ -20,7 +20,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Access your SAP BTP subaccount
+## Access your SAP BTP Subaccount
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
 - ⚠️ **Note:** You will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
@@ -30,7 +30,7 @@ The solution diagram illustrates the key components and their interactions withi
   - Password: Will be given to you as part of the session
   - In the list of directories and subaccounts, click on the entry for your subaccount.
 
-## Review the subscribed services and instances 
+## Review the Subscribed Services and Instances 
 
 ### Subscriptions
 
@@ -64,7 +64,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Review the configured user access
+## Review the Configured User Access
 
 - Check the users under **Security > Users**.
 
@@ -103,7 +103,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Review the development environment
+## Review the Development Environment
  
 As we are using Cloud Foundry, check under Cloud Foundry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
 
