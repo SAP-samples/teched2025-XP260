@@ -274,7 +274,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 
 ### Step 1: Test Legitimate Request (Valid Input)
 - Action :
-  - Run the following commands from integrated terminal :
+  - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. Run the following commands from integrated terminal :
 
 ```
   cds build
