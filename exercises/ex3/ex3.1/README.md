@@ -264,7 +264,8 @@ annotate my.Addresses with @PersonalData : {
 As part of audit logs, there can be cases where you want to generate custom audit logs. For example, if you want to log 403 - Forbidden events when a user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
 
 - Action:
-  - Copy the contents of [server.js](./server.js) into a new project’s root-level server.js file.
+  - Create a new file 'server.js' in your project on root-level, underneath 'secure-incident-management'
+  - Copy the contents of [server.js](./server.js) into the 'server.js' file.
   - Open 'server.js' from your project and make sure that the 403-audit logic (non-batch + batch sub-requests) are present exactly as shown here:
 
   ```
@@ -317,11 +318,11 @@ As part of audit logs, there can be cases where you want to generate custom audi
   module.exports = cds.server
   ```
 - Result:
-  - The audit_log_403 function is configured to capture **SecurityEvent** logs for all 403 Forbidden responses.
+  - The `audit_log_403` function is configured to capture **SecurityEvent** logs for all 403 Forbidden responses.
   - Three event handlers are implemented to enable comprehensive audit logging for security incidents like 403 Forbidden responses:
-    - cds.on('served'): Establishes connections to services like 'audit-log' after initialization, preparing resources for global event processing.
-    - cds.on('bootstrap'): Monitors HTTP response status codes for non-batch requests and triggers audit logging when a 403 error occurs.
-    - cds.on('serving'): Captures 403 errors within OData batch operations and logs them appropriately for service-specific events.
+    - `cds.on('served')`: Establishes connections to services like 'audit-log' after initialization, preparing resources for global event processing.
+    - `cds.on('bootstrap')`: Monitors HTTP response status codes for non-batch requests and triggers audit logging when a 403 error occurs.
+    - `cds.on('serving')`: Captures 403 errors within OData batch operations and logs them appropriately for service-specific events.
    
 
 ## ✅ 5. Verification
