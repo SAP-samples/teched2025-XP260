@@ -204,11 +204,10 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - Log in to the SAP BTP cockpit with your subaccount user **XP260-0xx@education.cloud.sap** and navigate to the SAP Audit Log Viewer service.
   - Apply filters for **data-modification** and **data-access** events.
   - Set the date/time range to match when the support user modified the incident record (e.g., Oct 20, 2025, 5:00 PM to Oct 20, 2025, 5:10 PM).
-  - Execute the filter query to retrieve the log entries.
-  - Locate the log entry corresponding to the support user (e.g., alice.support@company.com).
+  - Execute the filter query
 
 - ✅ **Result:**
-  - **You will notice that the specific field values and modifications** (customer, title, urgency, status, message) are **NOT displayed in the audit log.**
+  - **You will notice that there are no entries for user Alice in the audit log.**
   - **This reveals the vulnerability:** Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes. See screenshot:
 
     <p align="center">
