@@ -81,14 +81,13 @@ The solution diagram illustrates the key components and their interactions withi
   - **Business_Application_Studio_Extension_Deployer**
   - **Launchpad_Admin' are assigned.**
 
-- You will make use of some test users to test the application you are working on.
-- **bob.support@company.com** (Support user)
-- **alice.support@company.com** (Support user)
-- **david.admin@company.com** (Admin user)
+- You will make use of some test users to test the application you are working on :
+  - **bob.support@company.com** (Support user)
+  - **alice.support@company.com** (Support user)
+  - **david.admin@company.com** (Admin user)
 
 - Check the user role collections in the SAP BTP cockpit for Bob, Alice, and David:
-
-Select a user. In the right frame, check the role collections assigned:
+- Select a user. In the right frame, check the role collections assigned:
 - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
 - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
 
