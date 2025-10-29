@@ -183,7 +183,9 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
      - In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
      - Click the **Edit** button.
      - In the **Roles** sections, add the 2 roles with the role name "Auditlog_Auditor". One has the application identifier "auditlog-management*", the other "auditlog-viewer*".
-     - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User.
+     - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User:
+       -  Enter the user ID: "xp260-0XY@education.cloud.sap"
+       -  Select "akihlqzx8.accounts.ondemand.com (**business users**)" as Identity Provider
      - Click Save.
 
 - ✅ **Result: Roles Successfully Assigned**
