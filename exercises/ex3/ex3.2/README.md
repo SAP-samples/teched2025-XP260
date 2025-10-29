@@ -356,6 +356,7 @@ In this section, you will verify that the remediation has successfully resolved 
      - User: **Filter** by the support user account (e.g., alice.support@company.com)
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
+  - ⚠️ **Note:**: If the log entries do not show up immediately, you may have to wait a few seconds. 
     
 - ✅ **Result:**
   - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in [💥 3. Exploitation](./README.md#-3-exploitation), the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
