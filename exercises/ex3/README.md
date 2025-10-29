@@ -11,17 +11,17 @@ Security Logging and Monitoring Failures is a critical web application security 
 ## ⚠️ Why This Matters
 
 * **Business Impact:** Undetected attacks lead to data breaches, financial loss, and loss of customer trust.
-* **Compliance Risk:** Failure to log and monitor violates regulations such [PCI-DSS requirements](https://www.pcisecuritystandards.org/standards/) for protecting payment card information and the principle of least privilege.
+* **Compliance Risk:** Failure to log and monitor violates regulations such as [PCI-DSS requirements](https://www.pcisecuritystandards.org/standards/) for protecting payment card information and the principle of least privilege.
 * **Security Risk:** Attackers can operate unnoticed, and incidents cannot be properly investigated.
 
 ## 🔐 CAP Security Concept 
   
   CAP provides a comprehensive audit logging framework:
 
-- **Personal Data Protection:** Automatic audit logging for GDPR compliance using @PersonalData annotations
-- **Automated Audit Events:** Built-in logging for critical operations (SensitiveDataRead, PersonalDataModified, SecurityEvent)
+- **Personal Data Protection:** Automatic audit logging for GDPR compliance using `@PersonalData` annotations
+- **Automated Audit Events:** Built-in logging for critical operations (`SensitiveDataRead`, `PersonalDataModified`, `SecurityEvent`)
 - **Enterprise Integration:** SAP Audit Log Viewer service with tamper-proof storage and regulatory compliance
-- **Custom Security Logging:** Programmatic audit event generation via @cap-js/audit-logging
+- **Custom Security Logging:** Programmatic audit event generation via `@cap-js/audit-logging`
 
 There are two excercises related to this topic.
 
