@@ -263,6 +263,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
     - Locate a high-urgency open incident (assigned to anyone or unassigned).
     - Click "Edit", change status to "Closed", and save.
 - Result:
+    - ✅ The administrator has access to the incident management application.
     - ✅ The system successfully closes the high-urgency incident.
     - ✅ This confirms that only administrators can perform sensitive actions like closing high-risk incidents, as enforced by { grant: '*', to: 'admin' } and correct role-based access control.
  
