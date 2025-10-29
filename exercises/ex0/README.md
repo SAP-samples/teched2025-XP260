@@ -11,19 +11,36 @@ Login to open your subaccount XP260_0XX, where XX is your seat number.
 
 In the list of directories and subaccounts, click on the entry for your subaccount.
 
-## Review the subscribed services
+## Review the subscribed services and instances 
 
-The SAP BTP subaccount will have subscriptions to 
-- SAP Audit Log Viewer service
-- SAP Business Application Studio
-- SAP Build Work Zone, standard edition
+### Subscriptions
 
-You will be using the Cloud Foundry Runtime environment.
+| Application                           | Plan             |
+| :------------------------------       | :--------------- |
+| Audit Log Viewer Service              | free             |
+| SAP Business Application Studio       | standard-edition |
+| SAP Build Work Zone, standard edition | standard         |
 
-Check the subscriptions and the environment under Services > Instances and Subscriptions in the SAP BTP cockpit.
+### Instances
+
+| Instance Name                       | Service                                    | Plan        |
+| :------------------------------     | :-------------------------------------     | :---------- |
+| incident-management-auth            | Authorization and Trust Management Service | application |
+| incident-management-db              | SAP HANA Schemas & HDI Containers          | hdi-shared  |
+| incident-management-destination     | Destination Service                        | lite        |
+| incident-management-html5-repo-host | HTML5 Application Repository Service       | app-host    |
+| incident-management-html5-runtime   | HTML5 Application Repository Service       | app-runtime |
+
+### Environments
+
+| Environment Name    | Plan       |
+| :------------------ | :-------   |
+| Cloud Foundry Runtime | standard |
+
+Check the subscriptions, instances and the environment under Subaccount XP260_0xx > Instances and Subscriptions in the SAP BTP cockpit.
   
   <p align="center">
-    <img src="images/btp-subaccount-subscriptions.png" alt="" width="900"/>
+    <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
