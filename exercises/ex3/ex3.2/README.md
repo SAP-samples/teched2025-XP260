@@ -323,15 +323,14 @@ In this section, you will verify that the remediation has successfully resolved 
   
   - Log in to your SAP BTP, Cloud Foundry environment (if not already logged in):
   ```
-   cf login -a https://api.cf.<region>.hana.ondemand.com
+   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
   
   - Deploy the MTA to your SAP BTP, Cloud Foundry environment:
     
   ``` 
-   cf deploy mta_archives/<mtar_name>.mtar
+   cf deploy mta_archives/incident-management_1.0.0.mtar
   ```
-  - Replace <mtar_name> with the actual filename (e.g., incident-management_1.0.0.mtar).
  
 - ✅**Result:** The remediated application is now running in your SAP BTP, Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
 
