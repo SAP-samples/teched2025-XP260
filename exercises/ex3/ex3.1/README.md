@@ -432,8 +432,8 @@ This section evaluates the implementation of audit logging and data protection i
 }
 ```
 - ✅ Audit log generates **PersonalDataModified** entries for changes to annotated fields with @PersonalData.
-- ✅ Audit log masks only fields explicitly annotated #Sensitive.
-- ✅ This behavior is regulated by the @cap-js/audit-logging plugin and the audit-log.json configuration.
+- ✅ Audit log masks only fields explicitly annotated as sensitive.
+- ✅ This behavior is regulated by the `@cap-js/audit-logging` plugin and the audit-log.json configuration.
 
 #### Step 5: Test Write Access to Customer Data with Support User
 - Action:
