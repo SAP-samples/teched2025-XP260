@@ -230,6 +230,7 @@ This section outlines the steps to confirm that the remediation for the Vertical
 * Admin users can perform all operations, including those restricted for support users.
 
 ### Step 1: Deploy the Updated Application
+If you are unsure how to open a terminal window or need to re-authenticate the command line client, please take a look at the description in [Exercise 1.1 Section 5. Verification](https://github.com/SAP-samples/teched2025-XP260/blob/main/exercises/ex1/ex1.1/README.md#-5-verification)
 
 ```
 mbt build
