@@ -105,9 +105,29 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Review the Development Environment
  
-As we are using Cloud Foundry, check under Cloud Foundry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
+- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members** , if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager,Org User** under **Org Roles**. 
 
-Under Cloud Foundry > Spaces, verify the existence of your space called 'xp260-0XX'.
+ <p align="center">
+    <img src="images/btp-subaccount-org-members.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+- Under **Cloud Foundry > Spaces**, verify the existence of your space called **'XP260-0XX'**.
+  
+ <p align="center">
+    <img src="images/btp-subaccount-space.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space developer, Space Manager** under **Space Roles**.
+
+ <p align="center">
+    <img src="images/btp-subaccount-space-members.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 ## Launch SAP Business Application Studio
 
