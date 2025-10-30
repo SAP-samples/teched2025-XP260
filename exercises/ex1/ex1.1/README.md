@@ -366,7 +366,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
 - Open a terminal window.
   - In the Explorer Pane, right-click on the project name to open the context menu.
   - Select the menu item "Open in Integrated Terminal".
-- Update the node module in the development environment to ensure you have the current versions
+- Update the node modules in the development environment to ensure you have the current versions.
   ```
   npm update
   ```  
