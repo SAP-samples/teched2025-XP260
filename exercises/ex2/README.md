@@ -147,8 +147,9 @@ Authorization: Basic {{username}}:{{password}}
     - Test 3: A SQL Injection using multiple SQL statements.
 
 ### Step 2: Exploit the SQL Injection Vulnerability
-- Action :
-  - Run the following commands from the integrated terminal :
+- Action:
+  - Go to the integrated terminal. If you no longer have it open, right-click in the Explorer Pane on the project name to open the context menu. Then select the menu item "Open in Integrated Terminal".
+  - Run the following commands from the integrated terminal:
 
 ```
   cds build
@@ -273,7 +274,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 - The application now correctly uses parameterized queries, preventing any manipulation of the query structure.
 
 ### Step 1: Test Legitimate Request (Valid Input)
-- Action :
+- Action:
   - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. Run the following commands from integrated terminal:
 
 ```
