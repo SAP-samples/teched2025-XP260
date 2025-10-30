@@ -125,7 +125,7 @@ annotate AdminService with @(requires: 'admin');
 
 ### 📌 Critical Vulnerability Summary
 
-* ❌ **No ownership validation:** Without the 'assignedTo' field in the schema, there's no way to enforce restrictions, allowing any support user to update or delete any incident.
+* ❌ **No ownership validation:** Without the 'assignedTo' field in the schema, there's no way to enforce restrictions, allowing any support user to update or delete any open incident.
 * ❌ **Partial safeguards:** While updates to closed incidents are blocked, deletions remain unrestricted, amplifying risks.
 * ❌ **Security risks:** This enables widespread data tampering and deletion, directly aligning with OWASP Top 10 A01: Broken Access Control.
 
