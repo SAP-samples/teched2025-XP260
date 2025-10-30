@@ -2,12 +2,10 @@
 
 # Table of Contents
 
-# Table of Contents
-
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
-- [Access your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
+- [Access Your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
   - [Review the Subscribed Services and Instances](#review-the-subscribed-services-and-instances)
     - [Subscriptions](#subscriptions)
     - [Instances](#instances)
@@ -20,7 +18,7 @@
   - [Login Using the Command Line (Terminal)](#login-using-the-command-line-terminal)
 - [Launch SAP Build Work Zone](#launch-sap-build-work-zone)
 - [Summary](#summary)
-
+- 
 ## Overview 
 
 In this Hands-on exercises, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
@@ -213,7 +211,7 @@ Now after these checks, you can open the SAP Business Application Studio.
 ## Login to Your Cloud Foundry Environment from SAP Business Application Studio
 Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications.
 
-## Login Using the User Interface (UI)
+### Login Using the User Interface (UI)
 
 1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from Hamburger menu.
 
@@ -235,7 +233,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 11. Click on **Apply** button
 12. Once connected, a pop up in the status bar in BAS should display your org and space information.
   
-## Login Using the Command Line (Terminal)
+### Login Using the Command Line (Terminal)
 
 1. **Open Terminal**
    - In SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu
@@ -261,7 +259,6 @@ Go back to Services > Instances and Subscriptions in the SAP BTP cockpit. Click 
 Check if the Secure Incident Management Site is present. Click on the "Go to site" icon. When the Incident Management tile is displayed, sign out of the application and login with the alice.support@company.com user. Click on the tile to open the incident management application and bookmark the URL. 
 
 Now you are ready to start the exercises. 
-
 
 ## Summary
 
