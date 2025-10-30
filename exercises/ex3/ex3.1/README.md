@@ -439,7 +439,7 @@ This section evaluates the implementation of audit logging and data protection i
 - Action:
   - Open the file test/http/AdminService.http.
   - Change the username to 'alice'. The password should be empty.
-  - Go to line 7 and and click on 'Send Request' to run the 'POST {{server}}/odata/v4/admin/Customers' request.
+  - Go to line 13 and and click on 'Send Request' to run the 'POST {{server}}/odata/v4/admin/Customers' request.
 
 - Result:
   - ✅ Audit logs generate **SecurityEvent** for one customer entity. In your log, the timestamp matches the current timestamp.
