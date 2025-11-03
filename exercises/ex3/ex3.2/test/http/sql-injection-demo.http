@@ -34,7 +34,7 @@ Authorization: Basic {{username}}:{{password}}
   "customerID": "1004100' OR '1'='1"
 }
 
-### 🚨 Test 3: Union-Based SQL Injection (Multi-Statement Attack)
+### 🚨 Test 3: Select-Based SQL Injection (Multi-Statement Attack)
 # Payload: '; SELECT * FROM sap_capire_incidents_Customers;--
 # Expected: 
 #   - CAP's SQLite adapter blocks multiple statements (HTTP 400)
