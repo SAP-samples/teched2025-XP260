@@ -211,9 +211,9 @@ Now after these checks, you can open the SAP Business Application Studio.
 7- Bookmark your SAP Business Application Studio link.
 
 ## Login to Your Cloud Foundry Environment from SAP Business Application Studio
-Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications.
+Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications. Choose one of the following methods to log in:
 
-### Login Using the User Interface (UI)
+### 1. Login Using the User Interface (UI)
 
 1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from Hamburger menu.
 
@@ -283,7 +283,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
   
-### Login Using the Command Line (Terminal)
+### 2. Login Using the Command Line (Terminal)
 
 1. **Open Terminal**
    - In SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu
