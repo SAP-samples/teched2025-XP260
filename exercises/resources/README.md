@@ -1,8 +1,6 @@
 # Additional resources for developing secure applications
 
 ## Topics pages on the SAP Community
--  SAPUI5
--  SAP Fiori elements
 -  [SAP Fiori tools](https://pages.community.sap.com/topics/fiori-tools)
 -  [SAP Build Code](https://pages.community.sap.com/topics/build-code)
 -  [Cloud Application Programming](https://pages.community.sap.com/topics/cloud-application-programming)
@@ -18,10 +16,7 @@
 -  [Develop an Enterprise-Grade CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
 -  [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
 -  [Getting Started with In-App Extensibility in SAP S/4HANA](https://learning.sap.com/learning-journey/get-started-with-in-app-extensibility-in-sap-s-4hana)
--  Develop Extensions Using SAP S/4HANA Cloud, ABAP Environment
--  Develop an SAP Fiori Elements App based on a CAP OData V4 Service
 -  [Create an SAP S/4HANA extension app in 60 minutes](https://blogs.sap.com/2023/09/18/creating-an-s-4-extension-app-in-60-minutes/)
--  Create a Full-Stack SAP Fiori Application with Joule in SAP Build Code
 -  [Work with SAPUI5 Adaptation Projects to Make Changes and Extend the Source Code of an Application Variant of an SAP Fiori Application in SAP S/4HANA Cloud Public Edition](https://developers.sap.com/group.sapui5-adaptation-projects.html)
 
 ## Recorded Sessions
