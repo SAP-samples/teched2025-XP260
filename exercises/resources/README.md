@@ -1,11 +1,11 @@
 # Additional Resources for Developing Secure Applications
 
 ## Security Considerations for Applications
--   [Explore](https://help.sap.com/docs/btp/btp-developers-guide/building-blocks?q=Security+Considerations#security-considerations-in-the-explore-phase)
--   [Discover](https://help.sap.com/docs/btp/btp-developers-guide/discover?q=Security+Considerations#security-considerations-in-the-discover-phase)
--   [Design](https://help.sap.com/docs/btp/btp-developers-guide/design-6bb733981248482e86559bc52a87aaff?q=Security+Considerations#security-considerations-in-the-design-phase)
--   [Develop](https://help.sap.com/docs/btp/btp-developers-guide/security-considerations-for-applications?q=Security+Considerations)
--   [Run and Scale](https://help.sap.com/docs/btp/btp-developers-guide/run-and-scale?q=Security+Considerations#security-considerations-in-the-run-and-scale-phase)
+-   [Explore](https://help.sap.com/docs/btp/btp-developers-guide/building-blocks#security-considerations-in-the-explore-phase)
+-   [Discover](https://help.sap.com/docs/btp/btp-developers-guide/discover#security-considerations-in-the-discover-phase)
+-   [Design](https://help.sap.com/docs/btp/btp-developers-guide/design-6bb733981248482e86559bc52a87aaff#security-considerations-in-the-design-phase)
+-   [Develop](https://help.sap.com/docs/btp/btp-developers-guide/security-considerations-for-applications)
+-   [Run and Scale](https://help.sap.com/docs/btp/btp-developers-guide/run-and-scale#security-considerations-in-the-run-and-scale-phase)
 
 ## Topic Pages at SAP Community
 - [SAP Cloud Application Programming Model](https://pages.community.sap.com/topics/cloud-application-programming)
