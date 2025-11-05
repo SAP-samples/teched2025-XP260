@@ -27,6 +27,7 @@ Horizontal Privilege Escalation occurs when a user accesses resources belonging 
 - Reinforce business logic by preventing unauthorized actions.  
 
 ## 🚨 2. Vulnerable Code
+⚠️ Note: Do not copy the code from the **Vulnerabile Code** section into your project.
 
 **File**: `db/schema.cds`
 ```cds
