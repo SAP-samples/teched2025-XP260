@@ -34,6 +34,8 @@ This exercise highlights how the absence of audit logging for sensitive data acc
 ## 🚨 2. Vulnerable Code
 We’ll build upon [Exercise 2 - SQL Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging - a critical missing piece in the original implementation - to track security-sensitive actions.
 
+⚠️ Note: Do not copy the code from the Vulnerabile Code section into your project.
+
 **File**: `db/schema.cds`
 ```
 entity Customers : managed { 
