@@ -38,6 +38,8 @@ This violates critical business rules and poses significant risks to the integri
 ## 🚨 2. Vulnerable Code
 We will use exactly the [remediated code from Exercise 1.1](../ex1.1#%EF%B8%8F-4-remediation). It correctly prevents support users from touching other users’ incidents, but it does not yet enforce admin‑only rules (e.g. closing high‑urgency incidents, modifying closed incidents, deleting any incident).
 
+⚠️ Note: Do not copy the code from the Vulnerabile Code section into your project.
+
 **File**: `srv/services.cds`
 ```cds
 using { sap.capire.incidents as my } from '../db/schema';
@@ -140,6 +142,9 @@ The fixes follow the principle of least privilege, ensuring support users are bl
 ### Step 1: Update Services.cds
 The updated version for this exercise introduces Vertical Privilege Escalation protections, explicitly defining admin privileges for ProcessorService while maintaining the horizontal controls from [Exercise 1.1 - Horizontal Privilege Escalation]((../ex1.1/README.md)).
 
+- Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
+- Ensure the following corrected code is included in the file:
+  
 ```
 // Updated srv/services.cds
 
@@ -163,7 +168,6 @@ annotate ProcessorService with @(requires: ['support', 'admin']);  // ✅ NEW: A
 ...
 
 ```
-Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
 
 Key Changes:
 
@@ -175,6 +179,9 @@ The initial remediation code from [Exercise 1.1]((../ex1.1/README.md)) secured a
 However, it still allowed support users to perform actions reserved for administrators, such as closing high-urgency incidents. We enhance the existing services.js to fix Vertical Privilege Escalation.
 
 Here is the updated services.js with added checks to enforce the admin-only rules:
+
+- Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- Ensure the following corrected code is included in the file:
 
 ```
 // Updated srv/services.js
@@ -213,7 +220,6 @@ Here is the updated services.js with added checks to enforce the admin-only rule
 module.exports = { ProcessorService }
 
 ```
-Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
 
 Key Changes:
 
