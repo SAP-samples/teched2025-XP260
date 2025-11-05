@@ -177,7 +177,7 @@ entity Incidents : cuid, managed {
 
 ### 🪜 Step 2: Update Test Data with Assignments
 
-- Copy the contents of [sap.capire.incidents-Incidents.csv](./db/data/sap.capire.incidents-Incidents.csv) into your project’s db/data/sap.capire.incidents-Incidents.csv file.
+- Copy the contents of [sap.capire.incidents-Incidents.csv](./db/data/sap.capire.incidents-Incidents.csv) into your project’s **db/data/sap.capire.incidents-Incidents.csv** file.
 - Ensure the following data is included in the file:
 
 File: `db/data/sap.capire.incidents-Incidents.csv`
@@ -196,7 +196,7 @@ ID,customer_ID,title,urgency_code,status_code,assignedTo
 
 ### 🪜 Step 3: Implement Service-Level Security
 
-- Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
+- Copy the contents of [services.cds](./srv/services.cds) into your project’s **srv/services.cds** file.
 - Ensure the following corrected code is included in the file:
 
 File: `srv/services.cds`
@@ -246,7 +246,7 @@ using { sap.capire.incidents as my } from '../db/schema';
 > - `@restrict` in `services.cds` → **static authorization checks**. Enforced by CDS *before* any custom code runs.  
 > - `before`/`after` handlers in `services.js` → **dynamic business rules** that cannot be expressed using static `where` conditions.
 
-- Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- Copy the contents of [services.js](./srv/services.js) into your project’s **srv/services.js** file.
 - Ensure the following corrected code is included in the file:
 
 File: `srv/services.js`
@@ -312,7 +312,7 @@ add the following parts in the code:
 **i18n.properties file:**
   - Add new property: AssignedTo=Assigned To
 
-- Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s app/incidents/annotations.cds file.
+- Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s **app/incidents/annotations.cds** file.
 - Ensure the following corrected code is included in the file:
 
 **File**: app/incidents/annotations.cds changes:
@@ -369,7 +369,7 @@ UI.FieldGroup #GeneratedGroup : {
 
 **File**: /i18n/i18n.properties
 
-- Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s /_i18n/i18n.properties file.
+- Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s **/_i18n/i18n.properties** file.
 - Ensure the following corrected code is included in the file:
 ```
 ... Other entries
