@@ -12,6 +12,7 @@
 - [SAP Fiori development newsletter](https://www.sap.com/cmp/nl/sap-fiori-development-newsletter/index.html)
 
 ## Tutorials
+- [BTP Developer Guide for CAP](https://github.com/SAP-samples/btp-developer-guide-cap/tree/main/documentation)
 - [Develop a Full Stack CAP Application following the SAP BTP Developers Guide](https://discovery-center.cloud.sap/missiondetail/4327/4608/)
 - [Develop an Enterprise-Grade CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
 - [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
