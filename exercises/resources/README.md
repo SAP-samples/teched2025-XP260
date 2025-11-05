@@ -31,3 +31,6 @@
 ## Recorded Sessions
 - [UI5con 2024: Adding AI to SAP Fiori elements apps at both design time and runtime](https://www.youtube.com/live/MSdGLG2zLy8?t=26430s)
 - [TechEd 2023 hands-on session: Boost Your Productivity In Developing SAPUI5 apps With SAP Fiori Tools](https://github.com/SAP-samples/teched2023-DT262)
+
+## Available Hands-On Sessions
+- [Get Hands-On Security Recommendations for Your SAP BTP Environment](https://github.com/SAP-samples/teched2023-XP185v)
