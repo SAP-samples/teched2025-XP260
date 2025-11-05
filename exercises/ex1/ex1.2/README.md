@@ -142,7 +142,7 @@ The fixes follow the principle of least privilege, ensuring support users are bl
 ### Step 1: Update Services.cds
 The updated version for this exercise introduces Vertical Privilege Escalation protections, explicitly defining admin privileges for ProcessorService while maintaining the horizontal controls from [Exercise 1.1 - Horizontal Privilege Escalation]((../ex1.1/README.md)).
 
-- Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
+- Copy the contents of [services.cds](./srv/services.cds) into your project’s **srv/services.cds** file.
 - Ensure the following corrected code is included in the file:
   
 ```
@@ -180,7 +180,7 @@ However, it still allowed support users to perform actions reserved for administ
 
 Here is the updated services.js with added checks to enforce the admin-only rules:
 
-- Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- Copy the contents of [services.js](./srv/services.js) into your project’s **srv/services.js** file.
 - Ensure the following corrected code is included in the file:
 
 ```
