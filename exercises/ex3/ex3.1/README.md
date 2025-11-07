@@ -372,7 +372,7 @@ This section evaluates the implementation of audit logging and data protection i
 - Action:
   - Open the test/http/ProcessorService.http file.
   - Ensure that the username is 'alice'. The password should be left empty.
-  - Scroll to line 119 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
+  - Scroll to line 101 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
 
 - Results:
   - ✅ Here is a sample audit log event **SensitiveDataRead** for one customer entity. In your log, the timestamp matches the current timestamp.
