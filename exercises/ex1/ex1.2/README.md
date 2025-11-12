@@ -99,26 +99,26 @@ class ProcessorService extends cds.ApplicationService {
     
 ## 💥 3. Exploitation
 
-### Step 1: Login as Alice (Support User) 
+### 🪜 Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
 - Login with alice.support@company.com. This user is set up from the previous exercise.
 - Navigate to the Incident Management application.
 
-### Step 2: Exploit Closing High-Urgency Incident
-- Action: 
+### 🪜 Step 2: Exploit Closing High-Urgency Incident
+- ▶️ Action: 
   - Find a high-urgency incident assigned to Alice (e.g., "Strange noise when switching off Inverter"), or create a new incident with high urgency and assign it to Alice.
   - Click "Edit" → Change Status to "Closed".
   - Add a conversation message: "Closing this high-urgency incident as support user".
   - Click "Save".
-- Result:
+- ✅ Result:
   - ❌ The system allows Alice to close a high-urgency incident, violating the business rule.
 
-### Step 3: Login as Admin User
+### 🪜 Step 3: Login as Admin User
 
-- Action:
+- ▶️ Action:
   - Log out and log in as david.admin@company.com (admin role).
   - Try to open the incident management application (which will fail).
-- Result:
+- ✅ Result:
   - ❌ UI displays a blank loading screen (no error message).
   - ❌ Root Cause: @requires: 'support' in services.cds blocks admin access to the service.
 
@@ -139,7 +139,7 @@ The fixes follow the principle of least privilege, ensuring support users are bl
 * **Implement Custom Validation Logic:** Add checks in services.js to validate urgency and user roles during UPDATE operations, rejecting invalid closing of incidents.
 * **Improve UI Error Handling:** Modify the frontend to display meaningful error messages for forbidden actions.
 
-### Step 1: Update Services.cds
+### 🪜 Step 1: Update Services.cds
 The updated version for this exercise introduces Vertical Privilege Escalation protections, explicitly defining admin privileges for ProcessorService while maintaining the horizontal controls from [Exercise 1.1 - Horizontal Privilege Escalation]((../ex1.1/README.md)).
 
 - Copy the contents of [services.cds](./srv/services.cds) into your project’s **srv/services.cds** file.
@@ -174,7 +174,7 @@ Key Changes:
 * ✅ Admin Full Access: { grant: '*', to: 'admin' } grants admins complete CRUD permissions.
 * ✅ Service-Level Role Requirements: @requires: ['support', 'admin'] allows both roles to access the service.
 
-### Step 2: Update Services.js
+### 🪜 Step 2: Update Services.js
 The initial remediation code from [Exercise 1.1]((../ex1.1/README.md)) secured against Horizontal Privilege Escalation (support users interfering with other support users' incidents). 
 However, it still allowed support users to perform actions reserved for administrators, such as closing high-urgency incidents. We enhance the existing services.js to fix Vertical Privilege Escalation.
 
@@ -235,7 +235,7 @@ This section outlines the steps to confirm that the remediation for the Vertical
 * Support users cannot perform admin-only operations (e.g., closing high-urgency incidents, modifying/deleting closed incidents).
 * Admin users can perform all operations, including those restricted for support users.
 
-### Step 1: Deploy the Updated Application
+### 🪜 Step 1: Deploy the Updated Application
 If you are unsure how to open a terminal window or need to re-authenticate the command line client, please take a look at the description in [Exercise 1.1 Section 5. Verification](https://github.com/SAP-samples/teched2025-XP260/blob/main/exercises/ex1/ex1.1/README.md#-5-verification)
 
 ```
@@ -244,43 +244,43 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
 💡 Ensure the deployment includes both updated srv/services.cds and services.js logic.
 
-### Step 2: Login as Alice (Support User)
-- Action:
+### 🪜 Step 2: Login as Alice (Support User)
+- ▶️ Action:
   - Access SAP Build Work Zone and log in with alice.support@company.com.
   - Locate a high-urgency incident assigned to Alice or unassigned.
   - Confirm the urgency is set to "High" and the status is not closed.
   - Click "Edit" and try to set the status to "Closed" (status_code = 'C').
   - Save the changes.
-- Result:
-  - ❌ The system blocks the action.
-  - ❌ The UI displays an error: "Only administrators can close high-urgency incidents."
-  - ✅ This confirms that Vertical Privilege Escalation is prevented for high-urgency incidents.
+- ✅ Result:
+  - The system blocks the action.
+  - The UI displays an error: "Only administrators can close high-urgency incidents."
+  - This confirms that Vertical Privilege Escalation is prevented for high-urgency incidents.
 
-### Step 3: Verify Alice Can Modify Non-High-Urgency Incidents
-- Action:
-  - Locate a medium-urgency or low-urgency incident assigned to Alice or unassigned. If none exists, create it.
-  - Click "Edit", change status to "Closed", and save.
-- Result:
-  - ✅ The system allows the update and closes the incident.
-  - ✅ This confirms that normal workflow operations are preserved for non-critical incidents. Support users can close regular tickets — only high-urgency closures are restricted.
+### 🪜 Step 3: Verify Alice Can Modify Non-High-Urgency Incidents
+  - ▶️ Action:
+    - Locate a medium-urgency or low-urgency incident assigned to Alice or unassigned. If none exists, create it.
+    - Click "Edit", change status to "Closed", and save.
+  - ✅ Result:
+    - The system allows the update and closes the incident.
+    - This confirms that normal workflow operations are preserved for non-critical incidents. Support users can close regular tickets — only high-urgency closures are restricted.
  
-### Step 4: Login as David (Admin User)
-  - Action:
+### 🪜 Step 4: Login as David (Admin User)
+  - ▶️ Action:
     - Log in with david.admin@company.com.
     - Locate a high-urgency open incident (assigned to anyone or unassigned).
     - Click "Edit", change status to "Closed", and save.
-- Result:
-    - ✅ The administrator has access to the incident management application.
-    - ✅ The system successfully closes the high-urgency incident.
-    - ✅ This confirms that only administrators can perform sensitive actions like closing high-risk incidents, as enforced by { grant: '*', to: 'admin' } and correct role-based access control.
+  - ✅ Result:
+    - The administrator has access to the incident management application.
+    - The system successfully closes the high-urgency incident.
+    - This confirms that only administrators can perform sensitive actions like closing high-risk incidents, as enforced by { grant: '*', to: 'admin' } and correct role-based access control.
  
-### Step 5: Verify David can Modify/Delete a Closed Incident
-- Action:
-  - Locate the closed incident from Step 4.
-  - Edit the title or delete the incident.
-- Result:
-- ✅ The system allows both operations.
-- ✅ This confirms admins bypass restrictions applied to support users.
+### 🪜 Step 5: Verify David can Modify/Delete a Closed Incident
+  - ▶️ Action:
+    - Locate the closed incident from Step 4.
+    - Edit the title or delete the incident.
+  - ✅  Result:
+    - The system allows both operations.
+    - This confirms admins bypass restrictions applied to support users.
 
 ### 📌 Verification Summary
 
