@@ -38,7 +38,7 @@ This violates critical business rules and poses significant risks to the integri
 ## 🚨 2. Vulnerable Code
 We will use exactly the [remediated code from Exercise 1.1](../ex1.1#%EF%B8%8F-4-remediation). It correctly prevents support users from touching other users’ incidents, but it does not yet enforce admin‑only rules (e.g. closing high‑urgency incidents, modifying closed incidents, deleting any incident).
 
-⚠️ Note: Do not copy the code from the Vulnerabile Code section into your project.
+⚠️ Note: Do not copy the code from the **Vulnerabile Code** section into your project.
 
 **File**: `srv/services.cds`
 ```cds
