@@ -57,19 +57,19 @@ The solution diagram illustrates the key components and their interactions withi
 
 | Application                           | Plan             |
 | :------------------------------       | :--------------- |
-| Audit Log Viewer Service              | free             |
-| SAP Business Application Studio       | standard-edition |
-| SAP Build Work Zone, standard edition | standard         |
+| [Audit Log Viewer Service](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | free             |
+| [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | standard-edition |
+| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
 
 #### Instances
 
 | Instance Name                       | Service                                    | Plan        |
 | :------------------------------     | :-------------------------------------     | :---------- |
-| incident-management-auth            | Authorization and Trust Management Service | application |
-| incident-management-db              | SAP HANA Schemas & HDI Containers          | hdi-shared  |
-| incident-management-destination     | Destination Service                        | lite        |
-| incident-management-html5-repo-host | HTML5 Application Repository Service       | app-host    |
-| incident-management-html5-runtime   | HTML5 Application Repository Service       | app-runtime |
+| incident-management-auth            | [Authorization and Trust Management Service](https://discovery-center.cloud.sap/serviceCatalog/authorization-and-trust-management-service/?region=all) | application |
+| incident-management-db              | [SAP HANA Schemas & HDI Containers](https://help.sap.com/docs/hana-cloud-database/sap-hana-cloud-sap-hana-database-deployment-infrastructure-hdi-reference/sap-hdi-containers)          | hdi-shared  |
+| incident-management-destination     | [Destination Service](https://discovery-center.cloud.sap/serviceCatalog/destination-service/?service_plan=lite&region=all&commercialModel=btpea)                        | lite        |
+| incident-management-html5-repo-host | [HTML5 Application Repository Service](https://help.sap.com/docs/btp/sap-business-technology-platform/html5-application-repository)       | app-host    |
+| incident-management-html5-runtime   | [HTML5 Application Repository Service](https://help.sap.com/docs/btp/sap-business-technology-platform/html5-application-repository)       | app-runtime |
 
 #### Environments
 
