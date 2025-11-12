@@ -36,11 +36,11 @@ We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../ex1/ex1.2/R
 
 ### What We're Adding
 
-1. **CDS Service Definition (srv/services.cds):** A new fetchCustomer function in AdminService that accepts unvalidated input
+1. **CDS Service Definition (srv/services.cds):** A new **fetchCustomer** function in AdminService that accepts unvalidated input
 2. **Vulnerable Implementation (srv/services.js):** Raw SQL query with direct string insertion
 
 **Updated File:** srv/services.cds
-- The updated services.cds file now includes a new function called fetchCustomer in the AdminService. This function is intentionally designed to be vulnerable to SQL Injection for demonstration purposes.
+- The updated services.cds file now includes a new function called **fetchCustomer** in the AdminService. This function is intentionally designed to be vulnerable to SQL Injection for demonstration purposes.
 
 - Copy the contents of [services.cds](./srv/services.cds) into your project’s **srv/services.cds** file.
 - Ensure the following corrected code is included in the file:
@@ -108,7 +108,7 @@ module.exports = {ProcessorService, AdminService};
 
 We will exploit the SQL Injection vulnerability in a local development environment (SAP Business Application Studio with cds watch). Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
 
-### Step 1: Review the Test File for the HTTP Endpoint
+### 🪜 Step 1: Review the Test File for the HTTP Endpoint
 - Action:
   - Navigate to the `test/http` directory in your CAP project folder.
   - Open the file "sql-injection-demo.http".
@@ -150,7 +150,7 @@ Authorization: Basic {{username}}:{{password}}
   - Test 2: A malicious request that demonstrates a SQL Injection vulnerability.
   - Test 3: A SQL Injection using multiple SQL statements.
 
-### Step 2: Exploit the SQL Injection Vulnerability
+### 🪜 Step 2: Exploit the SQL Injection Vulnerability
 - Action:
   - Go to the integrated terminal. If you no longer have it open, right-click in the Explorer Pane on the project name to open the context menu. Then select the menu item "Open in Integrated Terminal".
   - Run the following commands from the integrated terminal:
@@ -245,10 +245,9 @@ Authorization: Basic {{username}}:{{password}}
 - ❌ **Lack of Input Sanitization:** No validation or sanitization is performed on the customerID input parameter before it is used in the SQL query.
 
 ## 🛡️ 4. Remediation
-- This section outlines the steps required to fix the SQL Injection vulnerability identified in the fetchCustomer function.
-
-### Step 1: Update the Vulnerable Code in srv/services.js
-- The updated services.js now includes a secure version of the fetchCustomer function. It replaces the vulnerable SQL string concatenation with CAP’s built-in parameterized query API (SELECT.from), which automatically sanitizes inputs and prevents SQL Injection.
+Now that you've identified the SQL Injection vulnerability, let's fix it by implementing secure database queries using CAP's built-in protections.
+- Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- Ensure the following corrected code is included in the file:
 
 ```
 // ✅ SECURE: Parameterized query using CAP’s fluent API
@@ -263,7 +262,7 @@ const query = SELECT.from('Customers') // Use the CDS entity name, not the full 
 });
 
 ```
-Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
+- The updated services.js now includes a secure version of the **fetchCustomer** function. 
 
 ### Key Changes:
   - ✅ Replaced raw SQL string concatenation with CAP’s SELECT.from().where() syntax.
@@ -277,7 +276,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 - Legitimate requests continue to function correctly and return expected results.
 - The application now correctly uses parameterized queries, preventing any manipulation of the query structure.
 
-### Step 1: Test Legitimate Request (Sanity Check)
+### 🪜 Step 1: Test Legitimate Request (Sanity Check)
 - Action:
   - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. Run the following commands from integrated terminal:
 
@@ -303,7 +302,7 @@ Authorization: Basic incident.support@tester.sap.com:initial
   - ✅ The system returns a single customer record for ID = 1004100.
   - ✅ This confirms that legitimate functionality remains intact after the fix.
 
-### Step 2: Test Basic SQL Injection (True-Clause Attack)
+### 🪜 Step 2: Test Basic SQL Injection (True-Clause Attack)
 - Action:
   - Execute the **Test 2: Basic SQL Injection** by clicking on "Send Request" above line 29:
 ```
@@ -334,7 +333,7 @@ Authorization: Basic incident.support@tester.sap.com:initial
 - ✅ The malicious payload ' OR '1'='1 is treated as a literal string value rather than executable SQL.
 - ✅ This confirms that the SQL Injection vulnerability has been successfully mitigated.
 
-### Step 3: SQL Injection -  multiple sql statements
+### 🪜 Step 3: SQL Injection -  multiple sql statements
 - Action:
   - - Execute the **Test 3** by clicking on "Send Request" above line 42:
 
