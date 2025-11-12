@@ -109,7 +109,7 @@ module.exports = {ProcessorService, AdminService};
 We will exploit the SQL Injection vulnerability in a local development environment (SAP Business Application Studio with cds watch). Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
 
 ### 🪜 Step 1: Review the Test File for the HTTP Endpoint
-- Action:
+- ▶️ Action:
   - Navigate to the `test/http` directory in your CAP project folder.
   - Open the file "sql-injection-demo.http".
   
@@ -151,7 +151,7 @@ Authorization: Basic {{username}}:{{password}}
   - Test 3: A SQL Injection using multiple SQL statements.
 
 ### 🪜 Step 2: Exploit the SQL Injection Vulnerability
-- Action:
+- ▶️ Action:
   - Go to the integrated terminal. If you no longer have it open, right-click in the Explorer Pane on the project name to open the context menu. Then select the menu item "Open in Integrated Terminal".
   - Run the following commands from the integrated terminal:
 
@@ -277,7 +277,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 - The application now correctly uses parameterized queries, preventing any manipulation of the query structure.
 
 ### 🪜 Step 1: Test Legitimate Request (Sanity Check)
-- Action:
+- ▶️ Action:
   - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. Run the following commands from integrated terminal:
 
 ```
@@ -298,12 +298,12 @@ Authorization: Basic incident.support@tester.sap.com:initial
   "customerID": "1004100"
 }
 ```
-- Result:
-  - ✅ The system returns a single customer record for ID = 1004100.
-  - ✅ This confirms that legitimate functionality remains intact after the fix.
+- ✅ Result:
+  - The system returns a single customer record for ID = 1004100.
+  - This confirms that legitimate functionality remains intact after the fix.
 
 ### 🪜 Step 2: Test Basic SQL Injection (True-Clause Attack)
-- Action:
+- ▶️ Action:
   - Execute the **Test 2: Basic SQL Injection** by clicking on "Send Request" above line 29:
 ```
   GET http://localhost:4004/odata/v4/admin/fetchCustomer
@@ -334,8 +334,7 @@ Authorization: Basic incident.support@tester.sap.com:initial
 - ✅ This confirms that the SQL Injection vulnerability has been successfully mitigated.
 
 ### 🪜 Step 3: SQL Injection -  multiple sql statements
-- Action:
-  - - Execute the **Test 3** by clicking on "Send Request" above line 42:
+- ▶️ Action: Execute the **Test 3** by clicking on "Send Request" above line 42:
 
 ```
   GET  {{server}}/odata/v4/admin/fetchCustomer
@@ -346,9 +345,9 @@ Authorization: Basic incident.support@tester.sap.com:initial
      "customerID": "1004100'; SELECT * from sap_capire_incidents_Customers;-- "
   }
 ```
-- Result:
-- ✅ All malicious payloads fail to return unintended data or alter query behavior.
-- ✅ The application either returns no results or a validation error, confirming comprehensive protection.
+- ✅ Result:
+  - All malicious payloads fail to return unintended data or alter query behavior.
+  - The application either returns no results or a validation error, confirming comprehensive protection.
 
 ### 📌 Verification Summary
 The remediation successfully addresses the SQL Injection vulnerability by:
@@ -374,9 +373,5 @@ Whenever there’s user input involved:
     You have successfully remediated the  [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/) vulnerability and fortified your application against one of the most critical security risks. Your application now follows secure coding best practices that prevent attacker-controlled input from compromising your database. 
 
 👉 Next up: [Exercise 3 - Security Logging and Monitoring Failures](../ex3/README.md), where we address critical [OWASP Top 10 2021 list (A09)](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) risks by implementing CAP's audit logging framework to detect unauthorized data access, track sensitive information flow, and ensure regulatory compliance through comprehensive security monitoring in enterprise environments.
-
-
-
-
 
 
