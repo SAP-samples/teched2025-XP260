@@ -29,7 +29,7 @@ By completing the exercises, you will gain the practical skills to identify and 
 
 ## 📋 Requirements
 
-You already have some experience with Node.js and GitHub.
+You already have some experience with Node.js and GitHub. That is helpful.
 
 💡In some of the exercises, you will be asked to switch from one user to another. This works more reliably if you use the Incognito mode of your browser. Without the Incognito mode, you may run into situations where you are authenticated automatically with the wrong user.
 
