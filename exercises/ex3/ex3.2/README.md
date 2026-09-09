@@ -26,7 +26,7 @@ In this exercise, you will extend the local audit-logging setup from [Exercise 3
 
 * Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Development](../ex3.1/README.md).
 * SAP Build Work Zone, standard edition configured and accessible.
-* The SAP Audit Log Viewer service has already been subscribed to in your SAP BTP subaccount with the standard plan.
+* The SAP Audit Log Viewer service has already been subscribed to in your SAP BTP subaccount with the premium plan.
 
 ## 🚨 2. Vulnerable Code
 Your existing [data-privacy.cds](../ex3.1/srv/data-privacy.cds) file only covers the Customers and Addresses entities. However, it is missing annotations for the Incidents entity and its conversation element. This gap can lead to significant privacy and compliance risks.
@@ -81,7 +81,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ▶️ **Action:** Execute the following command in your terminal:
     ```
-      cds add audit-logging --plan standard
+      cds add audit-logging --plan premium
     ```
 
   - Open 'mta.yaml' and scroll to the line 208 - **resources:** section (no edit required).
@@ -92,7 +92,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
       type: org.cloudfoundry.managed-service
       parameters:
         service: auditlog
-        service-plan: standard
+        service-plan: premium
     ```
   - Then, locate the incident-management-srv module in the 'mta.yaml' file and verify that the **requires:** section in line 33 includes the binding:  
     
@@ -144,7 +144,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
    - Confirm that the following service binding is present:
      * Service Binding Name: **incident-management-auditlog**
      * Service: **auditlog**
-     * Plan: **standard**
+     * Plan: **premium**
 
 - ✅ **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. See screenshot:
 
