@@ -42,12 +42,12 @@ The solution diagram illustrates the key components and their interactions withi
   </p>
 
 ## Access your SAP BTP Subaccount
-- Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
+- Access your SAP BTP account for the session xp261 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
 - ⚠️ **Note:** You will use an SAP BTP subaccount with subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
 
-- Login to open your subaccount **XP260_0XX**, where **XX** is your seat number: 
-  - Username: **xp260-0XX@education.cloud.sap** ( with XX depending on your seat from 01 - 40 )
+- Login to open your subaccount **xp261_0XX**, where **XX** is your seat number: 
+  - Username: **xp261-0XX@education.cloud.sap** ( with XX depending on your seat from 01 - 40 )
   - Password: Will be given to you as part of the session.
   - In the list of directories and subaccounts, click on the entry for your subaccount.
 
@@ -77,7 +77,7 @@ The solution diagram illustrates the key components and their interactions withi
 | :------------------ | :-------   |
 | [Cloud Foundry Runtime](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) | standard |
 
-- Check the subscriptions, instances, and the environment under subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
+- Check the subscriptions, instances, and the environment under subaccount **xp261_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
  
   <p align="center">
     <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
@@ -87,11 +87,11 @@ The solution diagram illustrates the key components and their interactions withi
 
 ### Review the Configured User Access:
 
-- ⚠️ **Note:** In this workshop, your account **xp260-0xx@education.cloud.sap** fulfills two key roles: as a **platform administrator** for configuring role collections and infrastructure, and as a **business application user** for developing and testing secure Incident Management features. This duality simplifies the training environment by eliminating constant re-logins during exercises, but in real-world systems, strict role separation ensuring users hold only necessary permissions—is essential.
+- ⚠️ **Note:** In this workshop, your account **xp261-0xx@education.cloud.sap** fulfills two key roles: as a **platform administrator** for configuring role collections and infrastructure, and as a **business application user** for developing and testing secure Incident Management features. This duality simplifies the training environment by eliminating constant re-logins during exercises, but in real-world systems, strict role separation ensuring users hold only necessary permissions—is essential.
 
 1- Check the users under **Security > Users**.
 
-2- Check your user **xp260-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
+2- Check your user **xp261-0XX@education.cloud.sap**. There will be two representations in the cockpit, one as **platform user** and one as **business user**. 
 
 3- Check **Role Collections** for the Business User
   - Locate and click on the business user representation in the user management interface.
@@ -109,7 +109,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-4- To demonstrate real-world access control, you'll test the application using dedicated accounts with **precisely scoped** role collections. Unlike your **xp260-0xx@education.cloud.sap** training account's broad privileges, these users showcase how proper role assignments enforce **least privilege** in production:
+4- To demonstrate real-world access control, you'll test the application using dedicated accounts with **precisely scoped** role collections. Unlike your **xp261-0xx@education.cloud.sap** training account's broad privileges, these users showcase how proper role assignments enforce **least privilege** in production:
   - **bob.support@company.com** (Support user)
   - **alice.support@company.com** (Support user)
   - **david.admin@company.com** (Admin user)
@@ -126,7 +126,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Review the Development Environment
  
-1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members**, if your platform user **xp260-0XX@education.cloud.sap** has **Org Manager, Org User** under **Org Roles**. 
+1- As we are using Cloud Foundry, check under **Cloud Foundry > Org Members**, if your platform user **xp261-0XX@education.cloud.sap** has **Org Manager, Org User** under **Org Roles**. 
 
  <p align="center">
     <img src="images/btp-subaccount-org-members.png" alt="" width="900"/>
@@ -134,7 +134,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-2- Under **Cloud Foundry > Spaces**, verify the existence of your space called **'XP260-0XX'**.
+2- Under **Cloud Foundry > Spaces**, verify the existence of your space called **'xp261-0XX'**.
   
  <p align="center">
     <img src="images/btp-subaccount-space.png" alt="" width="900"/>
@@ -142,7 +142,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-3- Under Space **XP260-0XX > Space Members**, verify if your platform user **xp260-0XX@education.cloud.sap** has **Space Developer, Space Manager** under **Space Roles**.
+3- Under Space **xp261-0XX > Space Members**, verify if your platform user **xp261-0XX@education.cloud.sap** has **Space Developer, Space Manager** under **Space Roles**.
 
  <p align="center">
     <img src="images/btp-subaccount-space-members.png" alt="" width="900"/>
@@ -242,7 +242,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-4. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
+4. Select **Sign in** with your user **xp261-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
 - ⚠️ **Note:** If your account is not displayed, click **Sign in to another account**.
 
 <p align="center">
@@ -265,7 +265,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-7. In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `XP260-0XX`), then click on the **Apply** button.
+7. In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `xp261-0XX`), then click on the **Apply** button.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
   <br>
@@ -297,7 +297,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
 3. When prompted enter:
-    * Email: xp260-0XX@education.cloud.sap
+    * Email: xp261-0XX@education.cloud.sap
     * Password: Use the password provided during the session.
     
 4.  To verify the login, run
@@ -330,7 +330,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-3- When the **Incident Management tile** is displayed, **Sign Out** from your current user **XP260-0xx@education.cloud.sap** and login to the application with the **alice.support@company.com** user. 
+3- When the **Incident Management tile** is displayed, **Sign Out** from your current user **xp261-0xx@education.cloud.sap** and login to the application with the **alice.support@company.com** user. 
 
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-sign-out.png" alt="" width="900"/>
