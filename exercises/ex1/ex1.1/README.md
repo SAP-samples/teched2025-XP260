@@ -56,20 +56,25 @@ entity Incidents : cuid, managed {
 **File**: `srv/services.cds`
 ```cds
 // VULNERABLE CODE - No access restrictions
-service ProcessorService { 
-    entity Incidents as projection on my.Incidents;      // ✅ Support user can view all incidents to assist effectively. (correct) 
-    @readonly
-    entity Customers as projection on my.Customers;      // ✅ Read-only customers (correct)
+using { sap.capire.incidents as my } from '../db/schema';
+
+/**
+ * Service used by support personnel, i.e. the incidents' 'processors'.
+ */
+service ProcessorService {
+
+    @requires: 'support'                               // ❌ VULNERABILITY: 'support' role grants unrestricted access to all operations.
+                                                       // ❌ Missing row-level or field-level restrictions exposes sensitive incident data.
+    entity Incidents as projection on my.Incidents;    // ❌ 'support' role can access all incidents (read, write, delete) 
+
+    @readonly                                          // ✅ Read-only customers (correct)
+    @requires: 'support'
+    entity Customers as projection on my.Customers;    // ✅ 'support' role can only read customers (correct)
 }
 
-annotate ProcessorService.Incidents with @odata.draft.enabled; 
-annotate ProcessorService with @(requires: 'support');   // ❌   VULNERABILITY: Only basic role check - no granular access control at row level
+annotate ProcessorService.Incidents with @odata.draft.enabled;
+annotate ProcessorService with @(requires: 'authenticated-user');  // ✅ Any logged-in user can load $metadata
 
-service AdminService {
-    entity Customers as projection on my.Customers;      // ✅ Admin full access (correct)
-    entity Incidents as projection on my.Incidents;      // ✅ Admin full access (correct)
-}
-annotate AdminService with @(requires: 'admin');        
 ```
 **Why this is vulnerable:**
 - The database schema lacks an 'assignedTo' field to track incident ownership.
